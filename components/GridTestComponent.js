@@ -104,13 +104,13 @@ const styles = StyleSheet.create({
   },
   button1: {
     width: "100%",
-    height: 150,
+    height: 100,
     backgroundColor: "#e3924e",
     justifyContent: "center",
   },
   button2: {
     width: "100%",
-    height: 150,
+    height: 100,
     justifyContent: "center",
   },
   buttonText: {
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     backgroundColor: "#699bc6",
-    height: 150,
+    height: 100,
     justifyContent: "center",
   },
   text: {
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   wideButton: {
     backgroundColor: "#699bc6",
-    height: 150,
+    height: 100,
     justifyContent: "center",
   },
 });

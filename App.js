@@ -6,6 +6,7 @@ import WideBox from "./styled-components/WideBox";
 import BodyText from "./styled-components/BodyText";
 import GridTestComponent from "./components/GridTestComponent";
 import {ButtonComponent} from "./components/ButtonComponent";
+import Touchable from "./components/Touchable"
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <>
       <GridTestComponent></GridTestComponent>
       {/* <ButtonComponent></ButtonComponent> */}
+      <Touchable></Touchable>
       </>
     </View>
   );
