@@ -2,43 +2,50 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import WideBox from '../styled-components/WideBox';
 
 const image = { uri: "https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg" };
 
 export default function App() {
   return (
-      <View style={styles.container}>
-
+      <WideBox>
         <View style={styles.logo}>
           <View style={styles.wideButton}>
             <Text style={styles.buttonText}>@ NextBestFriend</Text>
           </View>
         </View>
+      </WideBox>
 
   
-        <View style={styles.wideBox}>
+        <WideBox>
           <View style={styles.wideButton}>
-          <ImageBackground source={image} style={styles.image}></ImageBackground>
+            <ImageBackground source={image} style={styles.image}></ImageBackground>
           </View>
-        </View>
+        </WideBox>
 
-        <View style={styles.wideBox}>
+        <WideBox>
           <View style={styles.wideButton}>
             <Text style={styles.buttonText}>Find your next best friend</Text>
           </View>
-        </View>
+        </WideBox>
 
-        <View style={styles.box1}>
+        <WideBox>
           <View style={styles.button1}>
             <Text style={styles.buttonText}>Articles</Text>
           </View>
-        </View>
+        </WideBox>
 
         <View style={styles.box1}>
           <View style={styles.button2}>
             <Text style={styles.buttonText}>Profile</Text>
           </View>
         </View>
+        
+        <View style={styles.box1}>
+        <View style={styles.button2}>
+          <Text style={styles.buttonText}>Local Services</Text>
+        </View>
+      </View>
 
         <View style={styles.box1}>
           <View style={styles.button1}>
@@ -104,9 +111,7 @@ const styles = StyleSheet.create({
     height: 100,
     justifyContent: 'center',
   },
-  wideBox: {
-    width: '100%',
-  },
+  
   wideButton: {
     backgroundColor: '#699bc6',
     height: 100,
