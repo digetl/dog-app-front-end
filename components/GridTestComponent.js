@@ -1,5 +1,6 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
+import Hyperlink from "react-native-hyperlink";
+
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import WideBox from "../styled-components/WideBox";
 
@@ -8,7 +9,7 @@ const image = {
     "https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg",
 };
 
-export default function App() {
+const GridTestComponent = () => {
   return (
     <>
       <WideBox>
@@ -40,32 +41,40 @@ export default function App() {
         </View>
       </WideBox>
 
-      <View style={styles.box1}>
-        <View style={styles.button2}>
-          <Text style={styles.buttonText}>Profile</Text>
+      <View style={styles.container}>
+
+        <View style={styles.box1}>
+          <View style={styles.button2}>
+            <Text style={styles.buttonText}>Profile</Text>
+          </View>
         </View>
+
+        <View style={styles.box2}>
+          <View style={styles.button2}>
+            <Text style={styles.buttonText}>Local Services</Text>
+          </View>
+        </View>
+        
       </View>
 
-      <View style={styles.box1}>
-        <View style={styles.button2}>
-          <Text style={styles.buttonText}>Local Services</Text>
-        </View>
-      </View>
-
-      <View style={styles.box1}>
+      {/* <View style={styles.box1}>
         <View style={styles.button1}>
           <Text style={styles.buttonText}></Text>
         </View>
-      </View>
+      </View> */}
 
-      <View style={styles.box1}>
+      {/* <View style={styles.box1}>
         <View style={styles.button1}>
-          <Text style={styles.buttonText}></Text>
+          <Hyperlink linkDefault={true}>
+            <Text style={{ fontSize: 15 }}>
+              https://google.com and made clickable.
+            </Text>
+          </Hyperlink>
         </View>
-      </View>
+      </View> */}
     </>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -75,25 +84,33 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     flexDirection: "row",
     flexWrap: "wrap",
-    paddingTop: 40,
+
     justifyContent: "center",
   },
   box1: {
-    backgroundColor: "#699bc6",
+    backgroundColor: "#973618",
     alignItems: "center",
     margin: 0,
     width: "50%",
   },
+  box2: {
+    backgroundColor: "#f5f1f0",
+    alignItems: "center",
+    margin: 0,
+    width: "50%",
+  },
+  button: {
+    color: "blue",
+  },
   button1: {
     width: "100%",
-    height: 100,
+    height: 150,
     backgroundColor: "#e3924e",
     justifyContent: "center",
   },
   button2: {
     width: "100%",
-    height: 100,
-    backgroundColor: "#973618",
+    height: 150,
     justifyContent: "center",
   },
   buttonText: {
@@ -107,13 +124,17 @@ const styles = StyleSheet.create({
   },
   logo: {
     backgroundColor: "#699bc6",
-    height: 100,
+    height: 150,
     justifyContent: "center",
   },
-
+  text: {
+    color: "black",
+  },
   wideButton: {
     backgroundColor: "#699bc6",
-    height: 100,
+    height: 150,
     justifyContent: "center",
   },
 });
+
+export default GridTestComponent;
