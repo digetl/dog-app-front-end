@@ -1,5 +1,3 @@
 import styled from "styled-components";
 
-export default WideBox = styled.View`
-  width: "100%";
-`;
+export default WideBox = styled.View``;

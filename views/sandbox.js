@@ -1,5 +1,50 @@
 
 
+      <WideBox>
+        <View style={styles.wideButton}>
+          <ImageBackground
+            source={image}
+            style={styles.image}
+          ></ImageBackground>
+        </View>
+      </WideBox>
+
+      <WideBox>
+        <View style={styles.wideButton}>
+          <Text style={styles.buttonText}>Find your next best friend</Text>
+        </View>
+      </WideBox>
+
+      <WideBox>
+        <View style={styles.button1}>
+          <Text style={styles.buttonText}>Articles</Text>
+        </View>
+      </WideBox>
+
+      <View style={styles.box1}>
+        <View style={styles.button2}>
+          <Text style={styles.buttonText}>Profile</Text>
+        </View>
+      </View>
+
+      <View style={styles.box1}>
+        <View style={styles.button2}>
+          <Text style={styles.buttonText}>Local Services</Text>
+        </View>
+      </View>
+
+      <View style={styles.box1}>
+        <View style={styles.button1}>
+          <Text style={styles.buttonText}></Text>
+        </View>
+      </View>
+
+      <View style={styles.box1}>
+        <View style={styles.button1}>
+          <Text style={styles.buttonText}></Text>
+        </View>
+      </View>
+
 
 
 //////////////////////////////////////////////
