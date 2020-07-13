@@ -18,8 +18,7 @@ const image = {
 };
 
 const HomeScreen = ({ navigation }) => {
-  
-  const onPress=() => navigation.navigate("FindScreen");
+  const onPressFindScreen = () => navigation.navigate("FindScreen");
 
   return (
     <>
@@ -40,7 +39,7 @@ const HomeScreen = ({ navigation }) => {
         </WideButton>
       </WideBox>
 
-      <TouchableOpacity style={styles.button1} onPress={onPress}>
+      <TouchableOpacity style={styles.button1} onPress={onPressFindScreen}>
         <WideBox>
           <View style={styles.wideButton}>
             <Text style={styles.buttonText}>Find your next best friend</Text>
