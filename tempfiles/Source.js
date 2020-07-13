@@ -2,6 +2,7 @@ import React from "react";
 import {
 StyleSheet,
 View,
+Image,
 ActivityIndicator,
 FlatList,
 Text,
@@ -26,7 +27,7 @@ constructor(props) {
   };
 }
 componentDidMount(){
-fetch("https://jsonplaceholder.typicode.com/users")
+fetch("localhost:8080/dogs")
 .then(response => response.json())
 .then((responseJson)=> {
   this.setState({
@@ -48,9 +49,11 @@ return (
 }
 renderItem=(data)=>
 <TouchableOpacity style={styles.list}>
-<Text style={styles.lightText}>{data.item.name}</Text>
-<Text style={styles.lightText}>{data.item.email}</Text>
-<Text style={styles.lightText}>{data.item.company.name}</Text></TouchableOpacity>
+    <Text style={styles.lightText}>{data.breed}</Text>
+    <Text style={styles.lightText}>{data.size}</Text>
+    <Text style={styles.lightText}>{data.id}</Text>
+</TouchableOpacity>
+
 render(){
  if(this.state.loading){
   return( 
