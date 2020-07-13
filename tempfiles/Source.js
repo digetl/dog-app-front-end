@@ -27,7 +27,7 @@ constructor(props) {
   };
 }
 componentDidMount(){
-fetch("localhost:8080/dogs")
+fetch("http://127.0.0.1:8080/dogs")
 .then(response => response.json())
 .then((responseJson)=> {
   this.setState({
@@ -47,12 +47,14 @@ return (
 />
 );
 }
-renderItem=(data)=>
+renderItem=(data)=> {
+  return(
 <TouchableOpacity style={styles.list}>
-    <Text style={styles.lightText}>{data.breed}</Text>
-    <Text style={styles.lightText}>{data.size}</Text>
-    <Text style={styles.lightText}>{data.id}</Text>
+    <Text style={styles.lightText}>{data.item.breed}</Text>
+    <Text style={styles.lightText}>{data.item.size}</Text>
+    <Text style={styles.lightText}>{data.item.group}</Text>
 </TouchableOpacity>
+  )}
 
 render(){
  if(this.state.loading){
@@ -87,5 +89,8 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     margin: 5,
     backgroundColor: "#fff"
+   },
+   lightText:{
+     color:"#000"
    }
 });
