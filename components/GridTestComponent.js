@@ -1,5 +1,4 @@
 import React from "react";
-import Hyperlink from "react-native-hyperlink";
 
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import WideBox from "../styled-components/WideBox";
@@ -57,21 +56,7 @@ const GridTestComponent = () => {
         
       </View>
 
-      {/* <View style={styles.box1}>
-        <View style={styles.button1}>
-          <Text style={styles.buttonText}></Text>
-        </View>
-      </View> */}
-
-      {/* <View style={styles.box1}>
-        <View style={styles.button1}>
-          <Hyperlink linkDefault={true}>
-            <Text style={{ fontSize: 15 }}>
-              https://google.com and made clickable.
-            </Text>
-          </Hyperlink>
-        </View>
-      </View> */}
+     
     </>
   );
 };
