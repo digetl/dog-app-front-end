@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Stylesheet, Text, View } from "react-native";
 import WideBox from "../styled-components/WideBox";
+import Source from "../tempfiles/Source";
+import {Text} from "react-native";
 
 const FindScreen = () => {
   return (
@@ -9,6 +10,8 @@ const FindScreen = () => {
       <WideBox>
           <Text>Find Screen - you found it!</Text>
       </WideBox>
+
+      <Source></Source>
     </>
   );
 };
