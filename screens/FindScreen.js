@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 
-import { Stylesheet, Text, View } from "react-native";
 import WideBox from "../styled-components/WideBox";
-import { Icon, FooterTab, Footer, Button } from "native-base";
+import Source from "../tempfiles/Source";
+import { Text } from "react-native";
 
-// const FindScreen = () => {
-//   return (
-//     <>
-//       <WideBox>
-//         <Text>Find Screen - you found it!</Text>
-//       </WideBox>
-//     </>
-//   );
-// };
+const FindScreen = () => {
+  return (
+    <>
+      <WideBox>
+        <Text>Find Screen - you found it!</Text>
+      </WideBox>
+
+      <Source></Source>
+    </>
+  );
+};
 
 class FindScreen extends Component {
   render() {
