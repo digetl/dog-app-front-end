@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ImageBackground,
+} from "react-native";
 import WideBox from "../styled-components/WideBox";
 import Logo from "../styled-components/Logo";
 import WideButton from "../styled-components/WideButton";
@@ -12,30 +18,36 @@ const image = {
 };
 
 const HomeScreen = ({ navigation }) => {
+  
+  const onPress=() => navigation.navigate("FindScreen");
+
   return (
     <>
       <WideBox>
-      <Logo>
+        <Logo>
           <WideButton>
             <Text style={styles.buttonText}>@ NextBestFriend</Text>
           </WideButton>
         </Logo>
       </WideBox>
-    
-    <WideBox>
-      <WideButton>
-        <ImageBackground
-          source={image}
-          style={styles.image}
-        ></ImageBackground>
-      </WideButton>
-    </WideBox>
 
+      <WideBox>
+        <WideButton>
+          <ImageBackground
+            source={image}
+            style={styles.image}
+          ></ImageBackground>
+        </WideButton>
+      </WideBox>
 
+      <TouchableOpacity style={styles.button1} onPress={onPress}>
+        <WideBox>
+          <View style={styles.wideButton}>
+            <Text style={styles.buttonText}>Find your next best friend</Text>
+          </View>
+        </WideBox>
+      </TouchableOpacity>
     </>
-
-
-
 
     // <Button
     //   title="Go to Find screen"
@@ -43,7 +55,6 @@ const HomeScreen = ({ navigation }) => {
     // />
   );
 };
-
 
 const styles = StyleSheet.create({
   container: {
@@ -62,14 +73,11 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
-  
-  
+
   buttonText: {
     textAlign: "center",
     fontSize: 20,
-  }
+  },
 });
-
-
 
 export default HomeScreen;
