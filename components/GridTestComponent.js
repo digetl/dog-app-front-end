@@ -2,6 +2,8 @@ import React from "react";
 
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import WideBox from "../styled-components/WideBox";
+import Logo from "../styled-components/Logo";
+import WideButton from "../styled-components/WideButton";
 
 const image = {
   uri:
@@ -12,11 +14,11 @@ const GridTestComponent = () => {
   return (
     <>
       <WideBox>
-        <View style={styles.logo}>
-          <View style={styles.wideButton}>
+        <Logo>
+          <WideButton>
             <Text style={styles.buttonText}>@ NextBestFriend</Text>
-          </View>
-        </View>
+          </WideButton>
+        </Logo>
       </WideBox>
 
       <WideBox>
@@ -107,19 +109,10 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
-  logo: {
-    backgroundColor: "#699bc6",
-    height: 100,
-    justifyContent: "center",
-  },
+  
   text: {
     color: "black",
-  },
-  wideButton: {
-    backgroundColor: "#699bc6",
-    height: 100,
-    justifyContent: "center",
-  },
+  }
 });
 
 export default GridTestComponent;
