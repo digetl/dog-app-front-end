@@ -12,11 +12,8 @@ import {
     if (props.article) {
     return ( 
         <View style={styles.articleText}>
-            <Text>{props.article.title}</Text>
+            <Text style={styles.articleTitle}>{props.article.title}</Text>
             <Text>{props.article.text}</Text>
-            <Text>{props.article.para1}</Text>
-            <Text>{props.article.para2}</Text>
-            <Text>{props.article.para3}</Text>
         </View>
       );
     }
@@ -26,9 +23,17 @@ import {
   const styles = StyleSheet.create({
 
     articleText: {
-          justifyContent: "space-around",
+        paddingTop: 20,
+    },
+
+    articleTitle: {
+      color: "#52a6cb",
+      paddingBottom:10,
+      fontWeight: "bold",
+      fontSize:18,
+      textAlign: "center",
     }
 
-  })
+  });
 
   export default SingleArticle;
