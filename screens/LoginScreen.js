@@ -12,8 +12,7 @@ import LogInForm from "./LogInForm";
 export default class LoginScreen extends Component {
   render() {
     return (
-      //   <KeyboardAvoidingView behavior="padding" style={StyleSheet.container}>
-      <View style={styles.container}>
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <View style={styles.logoContainer}>
           <Image style={styles.logo} source={require("../assets/logo.png")} />
           <Text style={styles.title}> Who Let The Dogs Out!</Text>
@@ -21,8 +20,7 @@ export default class LoginScreen extends Component {
         <View style={styles.formContainer}>
           <LogInForm />
         </View>
-      </View>
-      //   </KeyboardAvoidingView>
+      </KeyboardAvoidingView>
     );
   }
 }

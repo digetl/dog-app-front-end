@@ -29,7 +29,8 @@ export default class LogInForm extends Component {
         <TextInput
           style={styles.input}
           placeholder="password"
-          placeholderTextColor="rgba(255,255,255,0.7"
+          placeholderTextColor="rgba(255,255,255,0.7)"
+          secureTextEntry
           // returnKeyType="go"
           // style={style.input}
           // ref={(input) => (this.passwordInput = input)}
@@ -45,12 +46,12 @@ export default class LogInForm extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 30,
   },
   input: {
     height: 40,
     backgroundColor: "rgba(255,255,255,0.3)",
-    marginBottom: 20,
+    marginBottom: 15,
     color: "#FFFF",
     paddingHorizontal: 10,
   },
@@ -61,5 +62,6 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: "center",
     color: "#FFFFFF",
+    fontWeight: "700",
   },
 });
