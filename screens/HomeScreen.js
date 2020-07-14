@@ -20,7 +20,7 @@ const image = {
 const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
   const onPressArticles = () => navigation.navigate("Articles");
-  const onPressProfiles = () => navigation.navigate("Profiles");
+  const onPressProfile = () => navigation.navigate("Profile");
 
   return (
     <>
@@ -50,13 +50,22 @@ const HomeScreen = ({ navigation }) => {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button1} onPress={onPressArticles}>
-      <WideBox>
-        <View style={styles.button1}>
-          <Text style={styles.buttonText}>Articles</Text>
+        <WideBox>
+          <View style={styles.button1}>
+            <Text style={styles.buttonText}>Articles</Text>
+          </View>
+        </WideBox>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button1} onPress={onPressProfile}>
+        <View style={styles.box1}>
+          <View style={styles.button2}>
+            <Text style={styles.buttonText}>Profile</Text>
+          </View>
         </View>
-      </WideBox>
       </TouchableOpacity>
     </>
+  
 
     // <Button
     //   title="Go to Find screen"
@@ -82,6 +91,12 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
+  box1: {
+    backgroundColor: "#973618",
+    alignItems: "center",
+    margin: 0,
+    width: "50%",
+  },
   buttonText: {
     textAlign: "center",
     fontSize: 20,
@@ -90,6 +105,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 100,
     backgroundColor: "#e3924e",
+    justifyContent: "center",
+  },
+  button2: {
+    width: "100%",
+    height: 100,
     justifyContent: "center",
   },
 });
