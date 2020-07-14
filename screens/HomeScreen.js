@@ -11,6 +11,7 @@ import WideBox from "../styled-components/WideBox";
 import Logo from "../styled-components/Logo";
 import WideButton from "../styled-components/WideButton";
 import { Button } from "react-native";
+import Footer from "../components/Footer";
 
 const image = {
   uri:
@@ -22,6 +23,7 @@ const HomeScreen = ({ navigation }) => {
   const onPressArticles = () => navigation.navigate("Articles");
   const onPressProfile = () => navigation.navigate("Profile");
   const onPressLocalServices = () => navigation.navigate("LocalServices");
+  const onPressHomeScreen = () => navigation.navigate("HomeScreen");
 
   return (
     <>
@@ -73,6 +75,8 @@ const HomeScreen = ({ navigation }) => {
             </View>
           </View>
         </TouchableOpacity>
+
+        <Footer onPress={onPressHomeScreen}></Footer>
 
       </View>
     </>
