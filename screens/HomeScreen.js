@@ -14,9 +14,14 @@
 // export default HomeScreen;
 
 import React, { Component } from "react";
+import { View, Text } from "react-native";
 
 export default class HomeScreen extends Component {
   render() {
-    return "Hello World";
+    return (
+      <View>
+        <Text>Hello world</Text>
+      </View>
+    );
   }
 }
