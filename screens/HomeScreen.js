@@ -20,6 +20,7 @@ const image = {
 const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
   const onPressArticles = () => navigation.navigate("Articles");
+  const onPressProfiles = () => navigation.navigate("Profiles");
 
   return (
     <>
