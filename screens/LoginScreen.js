@@ -7,7 +7,7 @@ export default class LoginScreen extends Component {
     return (
       <KeyboardAvoidingView behavior="padding" style={StyleSheet.container}>
         <View style={StyleSheet.logoContainer}></View>
-        <Image style={styles.logo} source={require("./assets/dogMock1.png")} />
+        {/* <Image style={styles.logo} source={require()} /> */}
 
         <Text style={styles.title} Some text here></Text>
 
@@ -40,4 +40,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
     opacity: 0.6,
   },
+  formContainer: {},
 });

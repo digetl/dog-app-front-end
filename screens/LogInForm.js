@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
+import { StyleSheet, View, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 
 export default class LogInForm extends Component {
@@ -10,6 +10,10 @@ export default class LogInForm extends Component {
           placeholder="username or email"
           placeholderTextColor="rgba(255,255,255,0.7)"
           returnKeyType="next"
+          onSubmitEditing={() => this.passwordInput.focus()}
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={false}
           style={style.input}
         />
         <TextInput
@@ -28,7 +32,7 @@ export default class LogInForm extends Component {
   }
 }
 
-const styles = StleSheet.create({
+const styles = StyleSheet.create({
   container: {
     padding: 20,
   },
@@ -45,7 +49,7 @@ const styles = StleSheet.create({
   },
   buttonText: {
     textAlign: "center",
-    color: "#FFFFF",
+    color: "#FFF",
     fontWeight: "700",
   },
 });
