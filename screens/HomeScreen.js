@@ -23,6 +23,7 @@ const HomeScreen = ({ navigation }) => {
   const onPressArticles = () => navigation.navigate("Articles");
   const onPressProfile = () => navigation.navigate("Profile");
   const onPressLocalServices = () => navigation.navigate("LocalServices");
+  const onPressHomeScreen = () => navigation.navigate("HomeScreen");
 
   return (
     <>
@@ -75,7 +76,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </TouchableOpacity>
 
-        <Footer></Footer>
+        <Footer onPress={onPressHomeScreen}></Footer>
 
       </View>
     </>

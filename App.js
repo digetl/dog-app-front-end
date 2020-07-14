@@ -12,7 +12,9 @@ import LocalServices from "./screens/LocalServices";
 import LoginScreen from "./screens/LoginScreen";
 import Manage from "./screens/Manage";
 import Profile from "./screens/Profile";
+import Footer from "./components/Footer";
 
+console.disableYellowBox = true;
 
 const Stack = createStackNavigator();
 
@@ -20,11 +22,13 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="FindScreen" component={FindScreen} />
         <Stack.Screen name="Articles" component={Articles} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="LocalServices" component={LocalServices} />
+        <Stack.Screen name="Footer" component={Footer} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
