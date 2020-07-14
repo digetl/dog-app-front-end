@@ -21,6 +21,7 @@ const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
   const onPressArticles = () => navigation.navigate("Articles");
   const onPressProfile = () => navigation.navigate("Profile");
+  const onPressLocalServices = () => navigation.navigate("LocalServices");
 
   return (
     <>
@@ -65,11 +66,14 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </TouchableOpacity>
 
-        <View style={styles.rightBox}>
-          <View style={styles.button2}>
-            <Text style={styles.buttonText}>Local Services</Text>
+        <TouchableOpacity style={styles.leftBox} onPress={onPressLocalServices}>
+          <View style={styles.rightBox}>
+            <View style={styles.button2}>
+              <Text style={styles.buttonText}>Local Services</Text>
+            </View>
           </View>
-        </View>
+        </TouchableOpacity>
+
       </View>
     </>
 
@@ -119,6 +123,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#e3924e",
     justifyContent: "center",
   },
+  
   orangeButton: {
     backgroundColor: "#e3924e",
   },

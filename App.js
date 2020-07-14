@@ -24,6 +24,7 @@ const App = () => {
         <Stack.Screen name="FindScreen" component={FindScreen} />
         <Stack.Screen name="Articles" component={Articles} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="LocalServices" component={LocalServices} />
       </Stack.Navigator>
     </NavigationContainer>
   );
