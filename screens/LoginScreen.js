@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, KeyboardAvoidingView } from "react-native";
 import LogInForm from "./LogInForm";
 
 export default class LoginScreen extends Component {
   render() {
     return (
-      <View style={StyleSheet.container}>
+      <KeyboardAvoidingView behavior="padding" style={StyleSheet.container}>
         <View style={StyleSheet.logoContainer}></View>
         <Image style={styles.logo} source={require("./assets/dogMock1.png")} />
 
@@ -14,7 +14,7 @@ export default class LoginScreen extends Component {
         <View style={StyleSheet.formContainer}>
           <LogInForm />
         </View>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

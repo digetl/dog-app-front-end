@@ -11,19 +11,38 @@ export default class LogInForm extends Component {
           placeholderTextColor="rgba(255,255,255,0.2)"
           style={style.input}
         />
-        <TextInput placeholder="password" style={style.input} />
+        <TextInput
+          placeholder="password"
+          placeholderTextColor="rgba(255,255,255,0.7"
+          style={style.input}
+        />
+
+        <TouchableOpacity style={style.buttonContainer}>
+          <Text stype={styles.buttonText}>LOGIN</Text>
+        </TouchableOpacity>
       </View>
     );
   }
 }
 
 const styles = StleSheet.create({
-  container: {},
+  container: {
+    padding: 20,
+  },
   input: {
     height: 40,
-    backgroundColor: "red",
-    marginBottom: 20,
+    backgroundColor: "rgba(255,255,255,0.2)",
+    marginBottom: 10,
     color: "#FFF",
     paddingHorizontal: 10,
+  },
+  buttonContainer: {
+    backgroundColor: "#2980b9",
+    paddingVertical: 15,
+  },
+  buttonText: {
+    textAlign: "center",
+    color: "#FFFFF",
+    fontWeight: "700",
   },
 });
