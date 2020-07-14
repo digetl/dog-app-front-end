@@ -40,11 +40,11 @@ const HomeScreen = ({ navigation }) => {
       </WideBox>
 
       <TouchableOpacity style={styles.button1} onPress={onPressFindScreen}>
-        <WideBox>
+        <WideButton>
           <View style={styles.wideButton}>
             <Text style={styles.buttonText}>Find your next best friend</Text>
           </View>
-        </WideBox>
+        </WideButton>
       </TouchableOpacity>
     </>
 
