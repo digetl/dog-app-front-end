@@ -26,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
     <>
       <WideBox>
         <Logo>
-          <WideButton>
+          <WideButton style={styles.blueButton}>
             <Text style={styles.buttonText}>@ NextBestFriend</Text>
           </WideButton>
         </Logo>
@@ -41,7 +41,7 @@ const HomeScreen = ({ navigation }) => {
         </WideButton>
       </WideBox>
 
-      <TouchableOpacity style={styles.button1} onPress={onPressFindScreen}>
+      <TouchableOpacity style={styles.blueButton} onPress={onPressFindScreen}>
         <WideButton>
           <View style={styles.wideButton}>
             <Text style={styles.buttonText}>Find your next best friend</Text>
@@ -49,23 +49,29 @@ const HomeScreen = ({ navigation }) => {
         </WideButton>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button1} onPress={onPressArticles}>
-        <WideBox>
-          <View style={styles.button1}>
+      <TouchableOpacity style={styles.orangeButton} onPress={onPressArticles}>
+        <WideButton>
+          <View style={styles.wideButton}>
             <Text style={styles.buttonText}>Articles</Text>
           </View>
-        </WideBox>
+        </WideButton>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button1} onPress={onPressProfile}>
-        <View style={styles.box1}>
+      <View style={styles.container}>
+        <TouchableOpacity style={styles.leftBox} onPress={onPressProfile}>
+            <View style={styles.button1}>
+              <Text style={styles.buttonText}>Profile</Text>
+      
+          </View>
+        </TouchableOpacity>
+
+        <View style={styles.rightBox}>
           <View style={styles.button2}>
-            <Text style={styles.buttonText}>Profile</Text>
+            <Text style={styles.buttonText}>Local Services</Text>
           </View>
         </View>
-      </TouchableOpacity>
+      </View>
     </>
-  
 
     // <Button
     //   title="Go to Find screen"
@@ -91,8 +97,14 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
-  box1: {
-    backgroundColor: "#973618",
+  leftBox: {
+    backgroundColor: "#e3924e",
+    alignItems: "center",
+    margin: 0,
+    width: "50%",
+  },
+  rightBox: {
+    backgroundColor: "#f5f1f0",
     alignItems: "center",
     margin: 0,
     width: "50%",
@@ -107,9 +119,25 @@ const styles = StyleSheet.create({
     backgroundColor: "#e3924e",
     justifyContent: "center",
   },
+  orangeButton: {
+    backgroundColor: "#e3924e",
+  },
+  
+  greyButton: {
+    backgroundColor: "#f5f1f0",
+  },
+
+  darkTanButton: {
+    backgroundColor: "#973618",
+  },
+
+  blueButton: {
+    backgroundColor: "#52a6cb",
+  },
   button2: {
     width: "100%",
     height: 100,
+    backgroundColor: "#555",
     justifyContent: "center",
   },
 });

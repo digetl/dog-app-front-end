@@ -3,7 +3,7 @@ import React from "react";
 import WideBox from "../styled-components/WideBox";
 import {Text} from "react-native";
 
-const FindScreen = () => {
+const Profile = () => {
   return (
     <>
       <WideBox>
@@ -13,4 +13,4 @@ const FindScreen = () => {
   );
 };
 
-export default FindScreen;
+export default Profile;
