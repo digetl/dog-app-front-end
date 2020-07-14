@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, KeyboardAvoidingView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  KeyboardAvoidingView,
+  Button,
+} from "react-native";
 import LogInForm from "./LogInForm";
 
 export default class LoginScreen extends Component {

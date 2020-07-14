@@ -1,11 +1,18 @@
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  Text,
+  StatusBar,
+} from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 
 export default class LogInForm extends Component {
   render() {
     return (
-      <View style={style.container}>
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
         <TextInput
           placeholder="username or email"
           placeholderTextColor="rgba(255,255,255,0.7)"
@@ -24,7 +31,7 @@ export default class LogInForm extends Component {
           ref={(input) => (this.passwordInput = input)}
         />
 
-        <TouchableOpacity style={style.buttonContainer}>
+        <TouchableOpacity style={styles.buttonContainer}>
           <Text stype={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
       </View>

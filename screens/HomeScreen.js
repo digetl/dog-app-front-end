@@ -1,14 +1,22 @@
-import React from "react";
+// import React, { Component } from "react";
 
-import { Button } from "react-native";
+// import { Button } from "react-native";
 
-const HomeScreen = ({ navigation }) => {
-  return (
-    <Button
-      title="Go to LogIn"
-      onPress={() => navigation.navigate("LoginScreen")}
-    />
-  );
-};
+// const HomeScreen = ({ navigation }) => {
+//   return (
+//     <Button
+//       title="Go to LogIn"
+//       onPress={() => navigation.navigate("LoginScreen")}
+//     />
+//   );
+// };
 
-export default HomeScreen;
+// export default HomeScreen;
+
+import React, { Component } from "react";
+
+export default class HomeScreen extends Component {
+  render() {
+    return "Hello World";
+  }
+}
