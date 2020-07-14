@@ -19,6 +19,7 @@ const image = {
 
 const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
+  const onPressArticles = () => navigation.navigate("Articles");
 
   return (
     <>
@@ -46,6 +47,14 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </WideButton>
       </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button1} onPress={onPressArticles}>
+      <WideBox>
+        <View style={styles.button1}>
+          <Text style={styles.buttonText}>Articles</Text>
+        </View>
+      </WideBox>
+      </TouchableOpacity>
     </>
 
     // <Button
@@ -72,10 +81,15 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
-
   buttonText: {
     textAlign: "center",
     fontSize: 20,
+  },
+  button1: {
+    width: "100%",
+    height: 100,
+    backgroundColor: "#e3924e",
+    justifyContent: "center",
   },
 });
 

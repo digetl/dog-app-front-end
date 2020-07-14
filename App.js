@@ -22,7 +22,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="FindScreen" component={FindScreen} />
-        
+        <Stack.Screen name="Articles" component={Articles} />
       </Stack.Navigator>
     </NavigationContainer>
   );
