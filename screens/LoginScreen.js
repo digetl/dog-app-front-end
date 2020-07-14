@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {
   StyleSheet,
   View,
+  Image,
   Text,
   KeyboardAvoidingView,
   Button,
@@ -11,16 +12,17 @@ import LogInForm from "./LogInForm";
 export default class LoginScreen extends Component {
   render() {
     return (
-      <KeyboardAvoidingView behavior="padding" style={StyleSheet.container}>
-        <View style={StyleSheet.logoContainer}></View>
-        {/* <Image style={styles.logo} source={require()} /> */}
-
-        <Text style={styles.title} Some text here></Text>
-
-        <View style={StyleSheet.formContainer}>
+      //   <KeyboardAvoidingView behavior="padding" style={StyleSheet.container}>
+      <View style={styles.container}>
+        <View style={styles.logoContainer}>
+          <Image style={styles.logo} source={require("../assets/logo.png")} />
+          <Text style={styles.title}> Who Let The Dogs Out!</Text>
+        </View>
+        <View style={styles.formContainer}>
           <LogInForm />
         </View>
-      </KeyboardAvoidingView>
+      </View>
+      //   </KeyboardAvoidingView>
     );
   }
 }
@@ -28,7 +30,7 @@ export default class LoginScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#19a79c",
   },
   logoContainer: {
     alignItems: "center",
@@ -40,11 +42,10 @@ const styles = StyleSheet.create({
     height: 100,
   },
   title: {
-    color: "#fff",
+    color: "white",
     marginTop: 10,
     width: 160,
     textAlign: "center",
-    opacity: 0.6,
+    opacity: 0.7,
   },
-  formContainer: {},
 });

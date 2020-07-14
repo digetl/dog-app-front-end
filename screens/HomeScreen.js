@@ -14,19 +14,19 @@
 // export default HomeScreen;
 
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
 export default class HomeScreen extends Component {
   render() {
     return (
-      <View style={styles.wrapper}>
+      <SafeAreaView style={styles.wrapper}>
         <View style={styles.titleWrapper}>
           <Text style={styles.title}>NEXT BEST FRIEND</Text>
         </View>
         <View>
           <Text style={styles.subtitle}>@who let the dogs out</Text>
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
   subtitle: {
     color: "white",
     fontWeight: "200",
+    paddingBottom: 20,
   },
   titleWrapper: {
     justifyContent: "center",

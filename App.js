@@ -32,10 +32,11 @@
 import React, { Component } from "react";
 import { AppRegistry, StyleSheet, Text, View } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 export default class App extends Component {
   render() {
-    return <HomeScreen />;
+    return <LoginScreen />;
   }
 }
 
