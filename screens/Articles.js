@@ -11,7 +11,7 @@ const DATA = [
   {
     id: "001",
     title: "What is Average Dog Weight?",
-    text: "An estimated 56 percent of dogs in the U.K. are overweight or obese.* How do you identify a healthy weight goal for your dog if he’s overweight (or underweight)? \r\rMost people turn to resources on the internet with an average dog weight or a range. Because all dogs are different, though, it’s not that simple. \r\rProblems with Identifying an “Average” Dog Weight\r\rSince dogs come in so many different breeds and sizes, it’s impossible to identify an average weight for all dogs. Weight may also depend on the dog’s sex and whether they’ve been spayed or neutered.",
+    text: "An estimated 56 percent of dogs in the U.K. are overweight or obese.* How do you identify a healthy weight goal for your dog if he’s overweight (or underweight)? \n\nMost people turn to resources on the internet with an average dog weight or a range. Because all dogs are different, though, it’s not that simple. \r\rProblems with Identifying an “Average” Dog Weight\n\nSince dogs come in so many different breeds and sizes, it’s impossible to identify an average weight for all dogs. Weight may also depend on the dog’s sex and whether they’ve been spayed or neutered.",
     
   },
   {
