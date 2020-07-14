@@ -19,9 +19,17 @@ import { View, Text } from "react-native";
 export default class HomeScreen extends Component {
   render() {
     return (
-      <View>
-        <Text>Hello world</Text>
+      <View style={styles.wrapper}>
+        <Text>NEXT BEST FRIEND</Text>
       </View>
     );
   }
 }
+const styles = {
+  wrapper: {
+    backgroundColor: "#c14a30",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+};
