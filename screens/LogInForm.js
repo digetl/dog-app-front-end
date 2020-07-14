@@ -8,13 +8,16 @@ export default class LogInForm extends Component {
       <View style={style.container}>
         <TextInput
           placeholder="username or email"
-          placeholderTextColor="rgba(255,255,255,0.2)"
+          placeholderTextColor="rgba(255,255,255,0.7)"
+          returnKeyType="next"
           style={style.input}
         />
         <TextInput
           placeholder="password"
           placeholderTextColor="rgba(255,255,255,0.7"
+          returnKeyType="go"
           style={style.input}
+          ref={(input) => (this.passwordInput = input)}
         />
 
         <TouchableOpacity style={style.buttonContainer}>
