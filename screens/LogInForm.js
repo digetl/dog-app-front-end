@@ -16,9 +16,8 @@ export default class LogInForm extends Component {
         {/* <StatusBar barStyle="light-content" /> */}
         <TextInput
           style={styles.input}
-
-          // placeholder="username or email"
-          // placeholderTextColor="rgba(255,255,255,0.7)"
+          placeholder="username or email"
+          placeholderTextColor="rgba(255,255,255,0.7)"
           // returnKeyType="next"
           // onSubmitEditing={() => this.passwordInput.focus()}
           // keyboardType="email-address"
@@ -29,16 +28,16 @@ export default class LogInForm extends Component {
 
         <TextInput
           style={styles.input}
-          // placeholder="password"
-          // placeholderTextColor="rgba(255,255,255,0.7"
+          placeholder="password"
+          placeholderTextColor="rgba(255,255,255,0.7"
           // returnKeyType="go"
           // style={style.input}
           // ref={(input) => (this.passwordInput = input)}
         />
 
-        {/* <TouchableOpacity style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.buttonContainer}>
           <Text stype={styles.buttonText}>LOGIN</Text>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
       </View>
     );
   }
@@ -50,17 +49,17 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    backgroundColor: "#c14a30",
-    //   marginBottom: 10,
-    //   color: "#FFF",
-    //   paddingHorizontal: 10,
+    backgroundColor: "rgba(255,255,255,0.3)",
+    marginBottom: 20,
+    color: "#FFFF",
+    paddingHorizontal: 10,
   },
-  // buttonContainer: {
-  //   backgroundColor: "#2980b9",
-  //   paddingVertical: 15,
-  // },
-  // buttonText: {
-  //   textAlign: "center",
-  //   color: "#FFF",
-  //   fontWeight: "700",
+  buttonContainer: {
+    backgroundColor: "#177e76",
+    paddingVertical: 15,
+  },
+  buttonText: {
+    textAlign: "center",
+    color: "#FFFFFF",
+  },
 });
