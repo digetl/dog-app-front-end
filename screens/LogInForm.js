@@ -15,7 +15,6 @@ export default class LogInForm extends Component {
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
         <TextInput
-          style={styles.input}
           placeholder="username or email"
           placeholderTextColor="rgba(255,255,255,0.7)"
           returnKeyType="next"
@@ -23,7 +22,7 @@ export default class LogInForm extends Component {
           keyboardType="email-address"
           autoCapitalize="none"
           autoCorrect={false}
-          // style={style.input}
+          style={styles.input}
         />
 
         <TextInput
@@ -34,9 +33,8 @@ export default class LogInForm extends Component {
           style={styles.input}
           ref={(input) => (this.passwordInput = input)}
         />
-
         <TouchableOpacity style={styles.buttonContainer}>
-          <Text stype={styles.buttonText}>LOGIN</Text>
+          <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
       </View>
     );
