@@ -36,12 +36,13 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: "#52a6cb",
-    height: 50,
+    height: 60,
     width: "100%",
     alignItems: "flex-start",
     justifyContent: "center",
     flexDirection: "row",
     flexWrap: "wrap",
+    padding: 5,
   },
   paw: {
     flex: 1,

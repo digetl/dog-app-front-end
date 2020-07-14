@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from ".././components/Footer";
 
 import WideBox from "../styled-components/WideBox";
 import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity } from "react-native";
@@ -54,7 +55,7 @@ const Articles = () => {
   };
 
   return (
-
+  <>
     <ScrollView>
       <SafeAreaView style={styles.container}>
 
@@ -71,8 +72,8 @@ const Articles = () => {
 
       </SafeAreaView>
     </ScrollView>
-
-   
+    <Footer></Footer>
+  </> 
   );
 };
 
