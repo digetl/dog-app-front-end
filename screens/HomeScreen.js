@@ -11,6 +11,7 @@ import WideBox from "../styled-components/WideBox";
 import Logo from "../styled-components/Logo";
 import WideButton from "../styled-components/WideButton";
 import { Button } from "react-native";
+import Footer from "../components/Footer";
 
 const image = {
   uri:
@@ -73,6 +74,8 @@ const HomeScreen = ({ navigation }) => {
             </View>
           </View>
         </TouchableOpacity>
+
+        <Footer></Footer>
 
       </View>
     </>
