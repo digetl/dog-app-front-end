@@ -18,7 +18,7 @@ export default class LogInForm extends Component {
           style={styles.input}
           placeholder="username or email"
           placeholderTextColor="rgba(255,255,255,0.7)"
-          // returnKeyType="next"
+          returnKeyType="next"
           // onSubmitEditing={() => this.passwordInput.focus()}
           // keyboardType="email-address"
           // autoCapitalize="none"
@@ -31,7 +31,7 @@ export default class LogInForm extends Component {
           placeholder="password"
           placeholderTextColor="rgba(255,255,255,0.7)"
           secureTextEntry
-          // returnKeyType="go"
+          returnKeyType="go"
           // style={style.input}
           // ref={(input) => (this.passwordInput = input)}
         />
