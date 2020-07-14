@@ -13,27 +13,26 @@ export default class LogInForm extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* <StatusBar barStyle="light-content" /> */}
+        <StatusBar barStyle="light-content" />
         <TextInput
           style={styles.input}
           placeholder="username or email"
           placeholderTextColor="rgba(255,255,255,0.7)"
           returnKeyType="next"
-          // onSubmitEditing={() => this.passwordInput.focus()}
-          // keyboardType="email-address"
-          // autoCapitalize="none"
-          // autoCorrect={false}
+          onSubmitEditing={() => this.passwordInput.focus()}
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={false}
           // style={style.input}
         />
 
         <TextInput
-          style={styles.input}
           placeholder="password"
           placeholderTextColor="rgba(255,255,255,0.7)"
           secureTextEntry
           returnKeyType="go"
-          // style={style.input}
-          // ref={(input) => (this.passwordInput = input)}
+          style={styles.input}
+          ref={(input) => (this.passwordInput = input)}
         />
 
         <TouchableOpacity style={styles.buttonContainer}>
