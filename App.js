@@ -1,6 +1,5 @@
 // import "react-native-gesture-handler";
 // import React from "react";
-// import { AppRegistry, StyleSheet, Text, View } from "react-native";
 
 // import { Asset } from "expo";
 
@@ -9,11 +8,8 @@
 
 // import HomeScreen from "./screens/HomeScreen";
 // import FindScreen from "./screens/FindScreen";
-// import LoginScreen from "./screens/LoginScreen";
-// import LogInForm from "./screens/LogInForm";
 
 // const Stack = createStackNavigator();
-
 // const App = () => {
 //   return (
 //     <NavigationContainer>
@@ -37,6 +33,7 @@ import LoginScreen from "./screens/LoginScreen";
 export default class App extends Component {
   render() {
     return <LoginScreen />;
+    // return <HomeScreen />;
   }
 }
 

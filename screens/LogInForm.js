@@ -24,7 +24,6 @@ export default class LogInForm extends Component {
           autoCorrect={false}
           style={styles.input}
         />
-
         <TextInput
           placeholder="password"
           placeholderTextColor="rgba(255,255,255,0.7)"

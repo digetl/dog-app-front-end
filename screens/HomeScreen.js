@@ -1,6 +1,6 @@
 // import React, { Component } from "react";
 
-// import { Button } from "react-native";
+// import { Button, StyleSheet } from "react-native";
 
 // const HomeScreen = ({ navigation }) => {
 //   return (
