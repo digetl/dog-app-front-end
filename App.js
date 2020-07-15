@@ -28,14 +28,13 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="FindScreen" component={FindScreen} />
         <Stack.Screen name="Articles" component={Articles} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="LocalServices" component={LocalServices} />
         <Stack.Screen name="Footer" component={Footer} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );

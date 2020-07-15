@@ -7,7 +7,7 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Footer = (props) => {
@@ -15,12 +15,14 @@ const Footer = (props) => {
     uri: "https://imageog.flaticon.com/icons/png/512/12/12638.png",
   };
 
+  const navigation = useNavigation();
+
 //   const onPressHomeScreen = () => navigation.navigate("HomeScreen");
 
   return (
     <>
       <View style={styles.footer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
           <ImageBackground source={image} style={styles.paw}></ImageBackground>
         </TouchableOpacity>
       </View>
