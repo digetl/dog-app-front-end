@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
+  Image,
+  ScrollView,
+  SafeAreaView,
   View,
   TouchableOpacity,
   ImageBackground,
@@ -12,11 +15,17 @@ import Logo from "../styled-components/Logo";
 import WideButton from "../styled-components/WideButton";
 import { Button } from "react-native";
 import Footer from "../components/Footer";
+import Constants from 'expo-constants';
 
-const image = {
-  uri:
-    "https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg",
-};
+
+import SingleArticle from "../articles/SingleArticle";
+
+// const image = {
+//   uri:
+//     "https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg",
+// };
+
+
 
 const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
@@ -27,22 +36,25 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <>
+    <SafeAreaView style={styles.container1}>
+      
       <WideBox>
         <Logo>
-          <WideButton style={styles.blueButton}>
-            <Text style={styles.buttonText}>@ NextBestFriend</Text>
+          <WideButton style={styles.blueButton2}>
+            
+              <Image style={styles.mainButton} source={require('../assets/nbfLogo.png')} />
+		        
           </WideButton>
         </Logo>
       </WideBox>
 
-      <WideBox>
-        <WideButton>
-          <ImageBackground
-            source={image}
-            style={styles.image}
-          ></ImageBackground>
-        </WideButton>
-      </WideBox>
+     
+        <View style={styles.widebutton2}>
+         
+            <Image style={styles.image1} source={require('../assets/lineup.png')} />
+        
+        </View>
+      
 
       <TouchableOpacity style={styles.blueButton} onPress={onPressFindScreen}>
         <WideButton>
@@ -74,15 +86,14 @@ const HomeScreen = ({ navigation }) => {
             </View>
         </TouchableOpacity>
 
-        <Footer onPress={onPressHomeScreen}></Footer>
+        
 
       </View>
-    </>
+      
+      <Footer onPress={onPressHomeScreen}></Footer>
+      </SafeAreaView>
 
-    // <Button
-    //   title="Go to Find screen"
-    //   onPress={() => navigation.navigate("FindScreen")}
-    // />
+    </>
   );
 };
 
@@ -93,7 +104,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",
     flexDirection: "row",
-    flexWrap: "wrap",
+    // flexWrap: "wrap",
     justifyContent: "center",
   },
   image: {
@@ -120,7 +131,7 @@ const styles = StyleSheet.create({
   },
   button1: {
     width: "100%",
-    height: 100,
+    height: 120,
     backgroundColor: "#e3924e",
     justifyContent: "center",
   },
@@ -141,13 +152,45 @@ const styles = StyleSheet.create({
   },
   mintButton: {
     backgroundColor: "#19A79C",
+    height: 115,
+
   },
   button2: {
     width: "100%",
-    height: 100,
+    height: 120,
     backgroundColor: "#a4c1db",
     justifyContent: "center",
   },
+
+  mainButton:{
+    flex: 0.7, height: undefined, width: undefined, resizeMode: 'contain',
+  },
+
+  container1: {
+    flex: 1,
+    flexGrow:2,
+    backgroundColor: "#52a6cb",
+    // alignItems: "flex-start",
+    flexDirection: "column",
+    // flexWrap: "wrap",
+    // justifyContent: "flex-end",
+  },
+
+  scrollView1: {
+        marginHorizontal: 0,
+   
+  },
+
+  image1: {
+    flex: 1, height: undefined, width: undefined, resizeMode: 'contain',
+  },
+  widebutton2: {
+    minHeight: 200,
+  },
+  blueButton2: {
+    backgroundColor: "#52a6cb",
+  },
+
 });
 
 export default HomeScreen;

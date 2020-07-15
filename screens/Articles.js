@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from ".././components/Footer";
 
 import WideBox from "../styled-components/WideBox";
-import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { FlatList, SafeAreaView, StatusBar, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import SingleArticle from "../articles/SingleArticle";
 import { ScrollView } from "react-native-gesture-handler";
@@ -56,9 +56,8 @@ const Articles = () => {
 
   return (
   <>
-    <ScrollView>
-      <SafeAreaView style={styles.container}>
-
+    <ScrollView style={styles.container}>
+      <KeyboardAvoidingView>
         <WideBox>
           <Text>Articles page</Text>
         </WideBox>
@@ -69,8 +68,7 @@ const Articles = () => {
           extraData={selectedId}
         />
         <SingleArticle article={DATA.find((item) => item.id === selectedId)}></SingleArticle>
-
-      </SafeAreaView>
+        </KeyboardAvoidingView>
     </ScrollView>
     <Footer></Footer>
   </> 
@@ -81,7 +79,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
-    justifyContent: "space-around",
+    // justifyContent: "space-around",
     margin: 15,
   },
   item: {

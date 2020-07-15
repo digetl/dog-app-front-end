@@ -11,9 +11,7 @@ import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Footer = (props) => {
-  const image = {
-    uri: "https://imageog.flaticon.com/icons/png/512/12/12638.png",
-  };
+  
 
   const navigation = useNavigation();
 
@@ -23,7 +21,7 @@ const Footer = (props) => {
     <>
       <View style={styles.footer}>
         <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-          <ImageBackground source={image} style={styles.paw}></ImageBackground>
+          <Image style={styles.footerButton} source={require('../assets/doghouse_w2.png')} />
         </TouchableOpacity>
       </View>
     </>
@@ -38,7 +36,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: "#52a6cb",
-    height: 60,
+    height: 70,
     width: "100%",
     alignItems: "flex-start",
     justifyContent: "center",
@@ -51,6 +49,11 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
   },
+
+  footerButton:{
+    flex: 1, height: 100, width: 50, resizeMode: 'contain',
+  },
+
 });
 
 export default Footer;
