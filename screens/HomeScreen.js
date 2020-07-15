@@ -61,19 +61,17 @@ const HomeScreen = ({ navigation }) => {
       </TouchableOpacity>
 
       <View style={styles.container}>
+
         <TouchableOpacity style={styles.leftBox} onPress={onPressProfile}>
             <View style={styles.button1}>
               <Text style={styles.buttonText}>Profile</Text>
-      
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.leftBox} onPress={onPressLocalServices}>
-          <View style={styles.rightBox}>
+        <TouchableOpacity style={styles.rightBox} onPress={onPressLocalServices}>
             <View style={styles.button2}>
               <Text style={styles.buttonText}>Local Services</Text>
             </View>
-          </View>
         </TouchableOpacity>
 
         <Footer onPress={onPressHomeScreen}></Footer>
