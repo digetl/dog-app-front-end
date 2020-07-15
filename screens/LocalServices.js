@@ -1,15 +1,18 @@
 import React from "react";
 
 import WideBox from "../styled-components/WideBox";
-import {Text, StyleSheet} from "react-native";
+import {Text, StyleSheet, ScrollView} from "react-native";
 import Footer from ".././components/Footer";
 
 const LocalServices = () => {
   return (
     <>
-      <WideBox>
-          <Text style={styles.title}>Local Services</Text>
-      </WideBox>
+      <ScrollView>
+        <WideBox>
+            <Text style={styles.title}>Local Services</Text>
+        </WideBox>
+      </ScrollView>
+        
       <Footer></Footer>
     </>
   );

@@ -1,16 +1,19 @@
 import React from "react";
 
 import WideBox from "../styled-components/WideBox";
-import {Text, StyleSheet} from "react-native";
+import {Text, StyleSheet, ScrollView} from "react-native";
 import Footer from ".././components/Footer";
 
 const Profile = () => {
   return (
     <>
-      <WideBox>
-          <Text style={styles.title}>Profile Page </Text>
-          <Footer></Footer>
-      </WideBox>
+      <ScrollView>
+        <WideBox>
+            <Text style={styles.title}>Profile Page </Text>
+        </WideBox>
+      </ScrollView>
+      
+      <Footer></Footer>
     </>
   );
 };
