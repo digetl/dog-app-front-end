@@ -30,6 +30,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <>
     <SafeAreaView style={styles.container1}>
+      <ScrollView>
       
       <WideBox>
         <Logo>
@@ -82,7 +83,10 @@ const HomeScreen = ({ navigation }) => {
         
 
       </View>
-      
+      <View style={styles.spacer}>
+
+      </View>
+      </ScrollView>
       <Footer onPress={onPressHomeScreen}></Footer>
       </SafeAreaView>
 
@@ -91,6 +95,10 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  spacer: {
+    minHeight:70,
+  },
+
   smallIconContainer: {
     flex: 1,
     backgroundColor: "#fff",
@@ -99,6 +107,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     // flexWrap: "wrap",
     justifyContent: "center",
+    minHeight:60,
   },
   image: {
     flex: 1,
@@ -146,7 +155,7 @@ const styles = StyleSheet.create({
   },
   mintButton: {
     backgroundColor: "#19A79C",
-    height: 115,
+    minHeight: 60,
 
   },
   button2: {
