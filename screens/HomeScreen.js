@@ -52,7 +52,7 @@ const HomeScreen = ({ navigation }) => {
         </WideButton>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.orangeButton} onPress={onPressArticles}>
+      <TouchableOpacity style={styles.mintButton} onPress={onPressArticles}>
         <WideButton>
           <View style={styles.wideButton}>
             <Text style={styles.buttonText}>Articles</Text>
@@ -60,20 +60,18 @@ const HomeScreen = ({ navigation }) => {
         </WideButton>
       </TouchableOpacity>
 
-      <View style={styles.container}>
+      <View style={styles.smallIconContainer}>
+
         <TouchableOpacity style={styles.leftBox} onPress={onPressProfile}>
             <View style={styles.button1}>
               <Text style={styles.buttonText}>Profile</Text>
-      
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.leftBox} onPress={onPressLocalServices}>
-          <View style={styles.rightBox}>
+        <TouchableOpacity style={styles.rightBox} onPress={onPressLocalServices}>
             <View style={styles.button2}>
               <Text style={styles.buttonText}>Local Services</Text>
             </View>
-          </View>
         </TouchableOpacity>
 
         <Footer onPress={onPressHomeScreen}></Footer>
@@ -89,17 +87,15 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  smallIconContainer: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "flex-start",
     justifyContent: "flex-start",
     flexDirection: "row",
     flexWrap: "wrap",
-
     justifyContent: "center",
   },
-
   image: {
     flex: 1,
     resizeMode: "cover",
@@ -112,7 +108,7 @@ const styles = StyleSheet.create({
     width: "50%",
   },
   rightBox: {
-    backgroundColor: "#f5f1f0",
+    backgroundColor: "#a4c1db",
     alignItems: "center",
     margin: 0,
     width: "50%",
@@ -120,6 +116,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: "center",
     fontSize: 20,
+    fontWeight: "bold",
   },
   button1: {
     width: "100%",
@@ -139,14 +136,16 @@ const styles = StyleSheet.create({
   darkTanButton: {
     backgroundColor: "#973618",
   },
-
   blueButton: {
     backgroundColor: "#52a6cb",
+  },
+  mintButton: {
+    backgroundColor: "#19A79C",
   },
   button2: {
     width: "100%",
     height: 100,
-    backgroundColor: "#555",
+    backgroundColor: "#a4c1db",
     justifyContent: "center",
   },
 });
