@@ -60,7 +60,7 @@ const HomeScreen = ({ navigation }) => {
         </WideButton>
       </TouchableOpacity>
 
-      <View style={styles.container}>
+      <View style={styles.smallIconContainer}>
 
         <TouchableOpacity style={styles.leftBox} onPress={onPressProfile}>
             <View style={styles.button1}>
@@ -87,17 +87,15 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  smallIconContainer: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "flex-start",
     justifyContent: "flex-start",
     flexDirection: "row",
     flexWrap: "wrap",
-
     justifyContent: "center",
   },
-
   image: {
     flex: 1,
     resizeMode: "cover",
@@ -110,7 +108,7 @@ const styles = StyleSheet.create({
     width: "50%",
   },
   rightBox: {
-    backgroundColor: "#f5f1f0",
+    backgroundColor: "#a4c1db",
     alignItems: "center",
     margin: 0,
     width: "50%",
@@ -118,6 +116,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: "center",
     fontSize: 20,
+    fontWeight: "bold",
   },
   button1: {
     width: "100%",
@@ -146,7 +145,7 @@ const styles = StyleSheet.create({
   button2: {
     width: "100%",
     height: 100,
-    backgroundColor: "#555",
+    backgroundColor: "#a4c1db",
     justifyContent: "center",
   },
 });
