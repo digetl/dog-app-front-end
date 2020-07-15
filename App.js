@@ -26,6 +26,7 @@ const Stack = createStackNavigator();
 const store = createStore(rootReducer);
 const App = () => {
   return (
+    <Provider store={store}>
     <NavigationContainer>
       <Stack.Navigator>
         {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
@@ -37,6 +38,8 @@ const App = () => {
         <Stack.Screen name="Footer" component={Footer} />
       </Stack.Navigator>
     </NavigationContainer>
+    </Provider>
+
   );
 };
 
