@@ -7,6 +7,7 @@ import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity} 
 
 import SingleService from "../localServices/SingleService";
 import { ScrollView } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 
 const DATA = [
   {
@@ -47,6 +48,7 @@ const Item = ({ item, onPress, style }) => (
 );
 
 const DogWalkingService = () => {
+  const navigation = useNavigation();
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
