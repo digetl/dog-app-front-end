@@ -29,65 +29,34 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <>
-    <SafeAreaView style={styles.container1}>
-      <ScrollView>
+    <SafeAreaView style={styles.homeView}>
       
-      <WideBox>
-        <Logo>
-          <WideButton style={styles.blueButton2}>
-            
-              <Image style={styles.mainButton} source={require('../assets/nbfLogo.png')} />
-		        
-          </WideButton>
-        </Logo>
-      </WideBox>
+      <View style={styles.logo}>
+        <Image source={require('../assets/nbfLogo.png')} />
+      </View>
 
-     
-        <View style={styles.widebutton2}>
-         
-            <Image style={styles.image1} source={require('../assets/lineup.png')} />
-        
-        </View>
-      
-
-      <TouchableOpacity style={styles.blueButton} onPress={onPressFindScreen}>
-        <WideButton>
-          <View style={styles.wideButton}>
-            <Text style={styles.buttonText}>Find your next best friend</Text>
-          </View>
-        </WideButton>
+      <View style={styles.logo} >
+        <Image source={require('../assets/lineup.png')} />
+      </View>
+       
+      <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={onPressFindScreen}>
+        <Text style={styles.buttonText}>Find your next best friend</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.mintButton} onPress={onPressArticles}>
-        <WideButton>
-          <View style={styles.wideButton}>
-            <Text style={styles.buttonText}>Articles</Text>
-          </View>
-        </WideButton>
+      <TouchableOpacity style={styles.buttonRow, styles.mintrow} onPress={onPressArticles}>
+        <Text style={styles.buttonText}>Articles</Text>
       </TouchableOpacity>
 
-      <View style={styles.smallIconContainer}>
-
-        <TouchableOpacity style={styles.leftBox} onPress={onPressProfile}>
-            <View style={styles.button1}>
-              <Text style={styles.buttonText}>Profile</Text>
-          </View>
+        <TouchableOpacity style={styles.buttonRow, styles.tanrow} onPress={onPressProfile}>
+          <Text style={styles.buttonText}>Profile</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.rightBox} onPress={onPressLocalServices}>
-            <View style={styles.button2}>
-              <Text style={styles.buttonText}>Local Services</Text>
-            </View>
+        <TouchableOpacity style={styles.buttonRow, styles.darktanrow} onPress={onPressLocalServices}>
+          <Text style={styles.buttonText}>Local Services</Text>
         </TouchableOpacity>
+    
+        <Footer onPress={onPressHomeScreen}></Footer>
 
-        
-
-      </View>
-      <View style={styles.spacer}>
-
-      </View>
-      </ScrollView>
-      <Footer onPress={onPressHomeScreen}></Footer>
       </SafeAreaView>
 
     </>
@@ -95,105 +64,43 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  spacer: {
-    minHeight:70,
+
+  homeView: {
+    backgroundColor: "#66a5c7",
+    flex:1,
+    flexDirection: "column",
   },
 
-  smallIconContainer: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    flexDirection: "row",
-    // flexWrap: "wrap",
-    justifyContent: "center",
-    minHeight:60,
+  logo: {
+    padding: 10,
   },
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
+
+  buttonRow: {
+    flex:1,
+    flexDirection: "row",  
+    justifyContent: 'center',
   },
-  leftBox: {
-    backgroundColor: "#e3924e",
-    alignItems: "center",
-    margin: 0,
-    width: "50%",
-  },
-  rightBox: {
-    backgroundColor: "#dd7622",
-    alignItems: "center",
-    margin: 0,
-    width: "50%",
-  },
+
   buttonText: {
-    textAlign: "center",
-    fontSize: 24,
+    fontSize:24,
     fontWeight: "bold",
     color: "#fff",
-  },
-  button1: {
-    width: "100%",
-    height: 120,
-    backgroundColor: "#e3924e",
-    justifyContent: "center",
-  },
-  
-  orangeButton: {
-    backgroundColor: "#e3924e",
-  },
-  
-  greyButton: {
-    backgroundColor: "#f5f1f0",
+    paddingTop:20,
+    paddingBottom:20,
+    textAlign: "center",
   },
 
-  darkTanButton: {
-    backgroundColor: "#973618",
-  },
-  blueButton: {
-    backgroundColor: "#116f67",
-  },
-  mintButton: {
-    backgroundColor: "#19A79C",
-    minHeight: 60,
+  greenrow: {
+    backgroundColor: "#326d67"},
 
-  },
-  button2: {
-    width: "100%",
-    height: 120,
-    backgroundColor: "#dd7622",
-    justifyContent: "center",
-  },
+   mintrow: {
+     backgroundColor: "#4da49c"},
+ 
+     tanrow: {
+     backgroundColor: "#d8955a"},
 
-  mainButton:{
-    flex: 0.7, height: undefined, width: undefined, resizeMode: 'contain',
-  },
-
-  container1: {
-    flex: 1,
-    flexGrow:2,
-    backgroundColor: "#52a6cb",
-    // alignItems: "flex-start",
-    flexDirection: "column",
-    // flexWrap: "wrap",
-    // justifyContent: "flex-end",
-  },
-
-  scrollView1: {
-        marginHorizontal: 0,
-   
-  },
-
-  image1: {
-    flex: 1, height: undefined, width: undefined, resizeMode: 'contain',
-  },
-  widebutton2: {
-    minHeight: 200,
-  },
-  blueButton2: {
-    backgroundColor: "#52a6cb",
-  },
-
+     darktanrow: {
+      backgroundColor: "#d07a38"},
 });
 
 export default HomeScreen;
