@@ -1,8 +1,13 @@
 import "react-native-gesture-handler";
 import React from "react";
 
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './RootReducer';
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+
 
 import HomeScreen from "./screens/HomeScreen";
 import FindScreen from "./screens/FindScreen";
@@ -18,6 +23,7 @@ console.disableYellowBox = true;
 
 const Stack = createStackNavigator();
 
+const store = createStore(rootReducer);
 const App = () => {
   return (
     <NavigationContainer>
