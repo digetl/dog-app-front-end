@@ -60,7 +60,7 @@ const Articles = () => {
       <SafeAreaView style={styles.container}>
 
         <WideBox>
-          <Text>Articles page</Text>
+          <Text style={styles.topTitle}>Latest Articles</Text>
         </WideBox>
         <FlatList
           data={DATA}
@@ -91,6 +91,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
+    textAlign: "center",
+  },
+  topTitle: {
+    fontSize: 20,
+    textAlign: "center",
+    fontWeight: "bold",
   },
 });
 
