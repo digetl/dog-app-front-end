@@ -7,6 +7,8 @@ const filterSizesReducer = (state = "", action) => {
             return state = "Medium";
         case "SELECT-LARGE":
             return state = "Large"
+        case "RESET-SIZE-FILTER":
+            return state = ""
         default:
             return state
     }

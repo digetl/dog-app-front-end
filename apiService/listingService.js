@@ -1,10 +1,11 @@
+const baseURL = "http://127.0.0.1:8080/listings"
 export default{
 
-    getTreasures(){
+    getListings(){
         return fetch(baseURL)
         .then(res => res.json())
     },
-    postTreasure(payload){
+    postListing(payload){
         return fetch(baseURL, {
             method: 'POST',
             body: JSON.stringify(payload),
@@ -12,7 +13,7 @@ export default{
         })
         .then(res => res.json())
     },
-    updateTreasure(payload){
+    updateListing(payload){
         return fetch(baseURL + payload._id, {
             method: 'PUT',
             body: JSON.stringify(payload),
@@ -20,7 +21,7 @@ export default{
         })
         .then(res => res.json())
     },
-    deleteTreasure(id){
+    deleteListing(id){
         return fetch(baseURL + id, {
             method: 'DELETE'
         })

@@ -15,3 +15,9 @@ export const selectGroup = () => {
         type: "SELECT-GROUP"
     }
 }
+
+export const resetTopicFilter = () => {
+    return {
+        type: "RESET-TOPIC-FILTER"
+    }
+}

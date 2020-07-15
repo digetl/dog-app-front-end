@@ -11,6 +11,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import HomeScreen from "./screens/HomeScreen";
 import FindScreen from "./screens/FindScreen";
+import ListingScreen from "./screens/ListingScreen";
 import Articles from "./screens/Articles";
 import Breeder from "./screens/Breeder";
 import LocalServices from "./screens/LocalServices";
@@ -32,6 +33,7 @@ const App = () => {
         {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="FindScreen" component={FindScreen} />
+        <Stack.Screen name="ListingScreen" component={ListingScreen} />
         <Stack.Screen name="Articles" component={Articles} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="LocalServices" component={LocalServices} />

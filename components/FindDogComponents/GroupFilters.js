@@ -1,5 +1,5 @@
 import React from "react";
-import {View} from "react-native"
+import {View, ScrollView} from "react-native"
 import FilterButton from "./FilterButton"
 
 import {useDispatch} from "react-redux"
@@ -12,13 +12,14 @@ import {
     selectUtility,
     selectWorking,
 } from "../../actions/filterGroupsSelectorActions"
+import { resetTopicFilter } from "../../actions/filterDogsSelectorActions";
 
-const TopicFilters = () => {
+const GroupFilters = () => {
 
     const dispatch = useDispatch()
 
     return (
-      <View>
+      <ScrollView>
         <FilterButton filter="Gundog" onPress={() => dispatch(selectGundog())}></FilterButton>
         <FilterButton filter="Hound" onPress={() => dispatch(selectHound())}></FilterButton>
         <FilterButton filter="Pastoral" onPress={() => dispatch(selectPastoral())}></FilterButton>
@@ -26,8 +27,8 @@ const TopicFilters = () => {
         <FilterButton filter="Terrier" onPress={() => dispatch(selectTerrier())}></FilterButton>
         <FilterButton filter="Utility" onPress={() => dispatch(selectUtility())}></FilterButton>
         <FilterButton filter="Working" onPress={() => dispatch(selectWorking())}></FilterButton>
-      </View>
+      </ScrollView>
     )
 }
 
-export default TopicFilters;
+export default GroupFilters;

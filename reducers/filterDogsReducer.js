@@ -6,7 +6,9 @@ const filterDogsReducer = (state = "", action) => {
         case "SELECT-SIZE":
             return state = "Size";
         case "SELECT-GROUP":
-            return state = "Group"
+            return state = "Group";
+        case "RESET-TOPIC-FILTER":
+            return state = ""
         default:
             return state
     }
