@@ -52,7 +52,7 @@ const HomeScreen = ({ navigation }) => {
         </WideButton>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.orangeButton} onPress={onPressArticles}>
+      <TouchableOpacity style={styles.mintButton} onPress={onPressArticles}>
         <WideButton>
           <View style={styles.wideButton}>
             <Text style={styles.buttonText}>Articles</Text>
@@ -137,9 +137,11 @@ const styles = StyleSheet.create({
   darkTanButton: {
     backgroundColor: "#973618",
   },
-
   blueButton: {
     backgroundColor: "#52a6cb",
+  },
+  mintButton: {
+    backgroundColor: "#19A79C",
   },
   button2: {
     width: "100%",
