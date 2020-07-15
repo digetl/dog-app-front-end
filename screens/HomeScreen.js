@@ -20,13 +20,6 @@ import Constants from 'expo-constants';
 
 import SingleArticle from "../articles/SingleArticle";
 
-// const image = {
-//   uri:
-//     "https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg",
-// };
-
-
-
 const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
   const onPressArticles = () => navigation.navigate("Articles");
@@ -119,15 +112,16 @@ const styles = StyleSheet.create({
     width: "50%",
   },
   rightBox: {
-    backgroundColor: "#a4c1db",
+    backgroundColor: "#dd7622",
     alignItems: "center",
     margin: 0,
     width: "50%",
   },
   buttonText: {
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
+    color: "#fff",
   },
   button1: {
     width: "100%",
@@ -148,7 +142,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#973618",
   },
   blueButton: {
-    backgroundColor: "#52a6cb",
+    backgroundColor: "#116f67",
   },
   mintButton: {
     backgroundColor: "#19A79C",
@@ -158,7 +152,7 @@ const styles = StyleSheet.create({
   button2: {
     width: "100%",
     height: 120,
-    backgroundColor: "#a4c1db",
+    backgroundColor: "#dd7622",
     justifyContent: "center",
   },
 
