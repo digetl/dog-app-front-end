@@ -30,10 +30,19 @@ const Profile = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 20,
-    textAlign: "center",
-    fontWeight: "bold",
+  smallIconContainer: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
   },
 });
 
