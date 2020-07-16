@@ -23,15 +23,17 @@ const HomeScreen = ({ navigation }) => {
   return (
     <>
     <SafeAreaView style={styles.homeView}>
-      
-      <View style={styles.logo}>
-        <Image source={require('../assets/nbfLogo.png')} />
+
+      <View style={styles.imagesBlock}>
+        <View style={styles.logo}>
+          <Image source={require('../assets/nbfLogo.png')} />
+        </View>
+
+        <View style={styles.logo} >
+          <Image source={require('../assets/lineup.png')} />
+        </View>
       </View>
 
-      <View style={styles.logo} >
-        <Image source={require('../assets/lineup.png')} />
-      </View>
-       
       <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={onPressFindScreen}>
         <Text style={styles.buttonText}>Find your next best friend</Text>
       </TouchableOpacity>
@@ -62,10 +64,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#66a5c7",
     flex:1,
     flexDirection: "column",
+    justifyContent: "space-around",
   },
-
+  imagesBlock: {
+    flex:1,
+    alignItems: 'center',
+  },
   logo: {
     padding: 10,
+    flex:1,
+    justifyContent: 'center',
   },
 
   buttonRow: {
