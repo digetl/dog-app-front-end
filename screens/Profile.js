@@ -14,22 +14,35 @@ import {
 } from "react-native";
 
 import { ScrollView } from "react-native-gesture-handler";
+import { ServerStyleSheet } from "styled-components";
 
 const Profile = ({ navigation }) => {
   return (
     <>
       <ScrollView>
-        <SafeAreaView behavior="padding" style={styles.container}>
-          <View>
+        <SafeAreaView style={styles.container}>
+    
+          <Text style={styles.buttonText}>Jayne MacDonald </Text>
+          <View style={styles.imagesBlock}>
             <Image
-              style={styles.logo}
-              source={require("../assets/lineup.png")}
-            ></Image>
-            <Text style={styles.title}>Profile Page </Text>
+                style={styles.image}
+                source={require("../assets/ProfilePic.png")}
+              >
+            </Image>
           </View>
+
+          <Text style={styles.buttonText}>My favourite best friends..</Text>
+          <Text style={styles.buttonText}>Looking for... Border Terrier</Text>
+          <Text style={styles.buttonText}>Home town... Dundee</Text>
+          
+          
         </SafeAreaView>
       </ScrollView>
-
+      <View style={styles.bottomButtons}>
+          <Text style={styles.edit}>Edit Profile</Text>
+          <Text style={styles.logOut}>Log out</Text>
+          <Text style={styles.settings}>Settings</Text>
+      </View>
       <Footer></Footer>
     </>
   );
@@ -37,11 +50,12 @@ const Profile = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#D8955A",
-    justifyContent: "center",
-    alignItems: "center",
+    flex:1,
+    flexDirection: "column",
+    alignContent: "center",
+
   },
+
   title: {
     color: "white",
     marginTop: 10,
@@ -49,88 +63,64 @@ const styles = StyleSheet.create({
     textAlign: "center",
     opacity: 0.8,
   },
+
   image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
+    flex:1,
+    padding: 10,
+    justifyContent: 'center',
   },
-  // titleContainer: {
-  //   flex: 1,
-  //   backgroundColor: "#D07A38",
-  //   justifyContent: "center",
-  // },
-  // smallIconContainer: {
-  //   flex: 1,
-  //   backgroundColor: "#fff",
-  //   alignItems: "flex-start",
-  //   justifyContent: "flex-start",
-  //   flexDirection: "row",
-  //   flexWrap: "wrap",
-  //   justifyContent: "center",
-  // },
-  // button2: {
-  //   width: "100%",
-  //   height: 100,
-  //   backgroundColor: "#a4c1db",
-  //   justifyContent: "center",
-  // },
-  // leftBox: {
-  //   backgroundColor: "#e3924e",
-  //   alignItems: "center",
-  //   margin: 0,
-  //   width: "50%",
-  // },
-  // rightBox: {
-  //   backgroundColor: "#e3924e",
-  //   alignItems: "center",
-  //   margin: 0,
-  //   width: "50%",
-  // },
-  // buttonText: {
-  //   textAlign: "center",
-  //   fontSize: 20,
-  //   fontWeight: "bold",
-  // },
-  // button1: {
-  //   width: "100%",
-  //   height: 100,
-  //   backgroundColor: "#e3924e",
-  //   justifyContent: "center",
-  // },
-  // mintButton: {
-  //   backgroundColor: "#19A79C",
-  // },
-  // buttonRow: {
-  //   flex: 1,
-  //   flexDirection: "row",
-  //   justifyContent: "center",
-  // },
-  // buttonText: {
-  //   fontSize: 24,
-  //   fontWeight: "bold",
-  //   color: "#fff",
-  //   paddingTop: 20,
-  //   paddingBottom: 20,
-  //   textAlign: "center",
-  // },
-  // greenrow: {
-  //   backgroundColor: "#D8955A",
-  // },
 
-  // orangeButton: {
-  //   backgroundColor: "#e3924e",
-  // },
+  buttonRow: {
+    flex: 1,
+    flexDirection: "row",
+    width: "100%",
+  },
 
-  // greyButton: {
-  //   backgroundColor: "#f5f1f0",
-  // },
+  imagesBlock: {
+    flex:1,
+    alignItems: 'center',
+    backgroundColor: "#fff",
+  },
 
-  // darkTanButton: {
-  //   backgroundColor: "#973618",
-  // },
-  // blueButton: {
-  //   backgroundColor: "#52a6cb",
-  // },
+  buttonText: {
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "300",
+    backgroundColor: "#D07A38",
+    color: "white",
+    paddingVertical: 15,
+  },
+
+  edit: {
+    flex:1,
+    backgroundColor: "#326D67",
+    color: "#fff",
+    textAlign: "center",
+    lineHeight:50,
+  },
+
+  logOut: {
+    flex:1,
+    backgroundColor: "#383732",
+    color: "#fff",
+    textAlign: "center",
+    lineHeight:50,
+  },
+
+  settings: {
+    flex:1,
+    backgroundColor: "#D07A38",
+    color: "#fff",
+    textAlign: "center",
+    lineHeight:50,
+  },
+
+  bottomButtons: {
+    flexDirection: 'row', width:'100%',
+    flex: 1,
+    alignItems:"flex-end",
+    },
+
 });
 
 export default Profile;
