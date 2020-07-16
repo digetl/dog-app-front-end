@@ -10,6 +10,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Image,
 } from "react-native";
 
 import { ScrollView } from "react-native-gesture-handler";
@@ -20,6 +21,10 @@ const Profile = ({ navigation }) => {
       <ScrollView>
         <SafeAreaView behavior="padding" style={styles.container}>
           <View>
+            <Image
+              style={styles.logo}
+              source={require("../assets/lineup.png")}
+            ></Image>
             <Text style={styles.title}>Profile Page </Text>
           </View>
         </SafeAreaView>
@@ -33,7 +38,7 @@ const Profile = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#D07A38",
+    backgroundColor: "#D8955A",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -43,6 +48,11 @@ const styles = StyleSheet.create({
     width: 160,
     textAlign: "center",
     opacity: 0.8,
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
   },
   // titleContainer: {
   //   flex: 1,
@@ -62,11 +72,6 @@ const styles = StyleSheet.create({
   //   width: "100%",
   //   height: 100,
   //   backgroundColor: "#a4c1db",
-  //   justifyContent: "center",
-  // },
-  // image: {
-  //   flex: 1,
-  //   resizeMode: "cover",
   //   justifyContent: "center",
   // },
   // leftBox: {
