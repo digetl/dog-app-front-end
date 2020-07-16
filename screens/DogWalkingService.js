@@ -7,12 +7,11 @@ import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity} 
 
 import SingleService from "../localServices/SingleService";
 import { ScrollView } from "react-native-gesture-handler";
-// import { useNavigation } from "@react-navigation/native";
+
 
 const DATA = [
   {
     id: "001",
-    service_type: "Dog Walker",
     name: "The Dashing White Rabbit Company",
     address: "3 Sinclair Place, Edinburgh, EH11 1AG",
     phone_number: "0131 478 5098"
@@ -20,21 +19,18 @@ const DATA = [
   },
   {
     id: "002",
-    service_type: "Dog Walker",
     name: "Healthy Hounds",
     address: "7/3 New Orchardfield, Edinburgh, EH6 5ES",
     phone_number: "07837 774478"
   },
   {
     id: "003",
-    service_type: "Dog Walker",
     name: "P and J Pet Care",
     address: "Gilmour Street, Edinburgh, EH8 9HR",
     phone_number: "07999 482440"
   },
   {
     id: "004",
-    service_type: "Dog Walker",
     name: "Dog Walking Edinburgh",
     address: "14/7 Murano Place, Edinburgh, EH7 5HG",
     phone_number: "07814 447450"
@@ -48,7 +44,7 @@ const Item = ({ item, onPress, style }) => (
 );
 
 const DogWalkingService = () => {
-  // const navigation = useNavigation();
+  
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
@@ -70,7 +66,7 @@ const DogWalkingService = () => {
       <ScrollView>
       <SafeAreaView style={styles.container}>
         <WideBox>
-          <Text>Local Services</Text>
+          <Text>Dog Walking Services</Text>
         </WideBox>
         <FlatList
           data={DATA}
@@ -108,6 +104,21 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
+  buttonRow: {
+    flex:1,
+    flexDirection: "row",  
+    justifyContent: 'center',
+  },
+  buttonText: {
+    fontSize:24,
+    fontWeight: "bold",
+    color: "#fff",
+    paddingTop:20,
+    paddingBottom:20,
+    textAlign: "center",
+  },
+  greenrow: {
+    backgroundColor: "#326d67"},
 });
 
 
