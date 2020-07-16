@@ -33,8 +33,8 @@ const DATA = [
 ];
 
 const Item = ({ item, onPress, style }) => (
-  <TouchableOpacity onPress={onPress} style={[styles.item, style]}>
-    <Text>{item.name}</Text>
+  <TouchableOpacity onPress={onPress} style={[styles.buttonRow, style]}>
+    <Text style={styles.buttonText}>{item.name}</Text>
   </TouchableOpacity>
 );
 
@@ -43,7 +43,7 @@ const VetService = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#52a6cb" : "#a4c1db";
+    const backgroundColor = item.id === selectedId ? "#4da49c" : "#a4c1db";
 
     return (
       
@@ -60,9 +60,7 @@ const VetService = () => {
     <>
       <ScrollView>
       <SafeAreaView style={styles.container}>
-        <WideBox>
-          <Text>Pet Shops</Text>
-        </WideBox>
+
         <FlatList
           data={DATA}
           renderItem={renderItem}
@@ -90,30 +88,32 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     marginHorizontal: 16,
   },
-  title: {
-    fontSize: 16,
-    textAlign: "center",
-  },
-  topTitle: {
-    fontSize: 20,
-    textAlign: "center",
-    fontWeight: "bold",
-  },
+
   buttonRow: {
     flex:1,
     flexDirection: "row",  
     justifyContent: 'center',
+    marginBottom:5,
   },
   buttonText: {
-    fontSize:24,
+    fontSize:18,
     fontWeight: "bold",
     color: "#fff",
-    paddingTop:20,
-    paddingBottom:20,
+    paddingTop:10,
+    paddingBottom:10,
     textAlign: "center",
   },
   greenrow: {
     backgroundColor: "#326d67"},
+
+  mintrow: {
+    backgroundColor: "#4da49c"},
+  
+  tanrow: {
+    backgroundColor: "#d8955a"},
+
+  darktanrow: {
+    backgroundColor: "#d07a38"},
 });
 
 

@@ -80,30 +80,18 @@ const DogWalkingService = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
-    justifyContent: "space-around",
-    margin: 15,
-  },
-  item: {
-    padding: 10,
-    marginVertical: 4,
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 16,
-    textAlign: "center",
-  },
-  topTitle: {
-    fontSize: 20,
-    textAlign: "center",
-    fontWeight: "bold",
-  },
+    container: {
+      flex: 1,
+      marginTop: StatusBar.currentHeight || 0,
+      justifyContent: "space-around",
+      margin: 15,
+    },
+    item: {
+      padding: 10,
+      marginVertical: 4,
+      marginHorizontal: 16,
+    },
   
-
-
-
     buttonRow: {
       flex:1,
       flexDirection: "row",  
