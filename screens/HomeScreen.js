@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+import { useSelector, useDispatch} from "react-redux"
+import {resetTopicFilter} from "../actions/filterDogsSelectorActions"
+import { resetGroupFilter } from "../actions/filterGroupsSelectorActions";
+import { resetSizeFilter } from "../actions/filterSizesSelectorActions";
+
 
 import {
   StyleSheet,
@@ -19,7 +25,15 @@ const image = {
 };
 
 const HomeScreen = ({ navigation }) => {
-  const onPressFindScreen = () => navigation.navigate("FindScreen");
+  const dispatch = useDispatch()
+
+  const onPressFindScreen = () => {
+    navigation.navigate("FindScreen")
+    dispatch(resetTopicFilter())
+    dispatch(resetGroupFilter())
+    dispatch(resetSizeFilter())
+  };
+
   const onPressArticles = () => navigation.navigate("Articles");
   const onPressProfile = () => navigation.navigate("Profile");
   const onPressLocalServices = () => navigation.navigate("LocalServices");

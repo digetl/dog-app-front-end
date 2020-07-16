@@ -39,3 +39,9 @@ export const selectWorking = () => {
         type: "SELECT-WORKING"
     }
 }
+
+export const resetGroupFilter = () => {
+    return {
+        type: "RESET-GROUP-FILTER"
+    }
+}

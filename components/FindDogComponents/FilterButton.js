@@ -17,30 +17,20 @@ const FilterButton = ({filter, onPress}) => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        backgroundColor: "#fff"
-    },
-    filterContainer: {
-        flex: 0.5,
-        flexDirection: "column",
-        justifyContent: "space-around",
-        alignItems: "center",
-    },
     filterButton: {
-        flex: 1,
+        display: "flex",
         justifyContent: "center",
-        height: 50,
-        width: 200,
-        backgroundColor: "#8feb34",
-        margin: 10
-    },
-    filterText: {
-        textAlign:"center",
-        alignItems: "center"
+        alignItems: "center",
+        height: 100,
+        width: 300,
+        backgroundColor: "#19A79C",
+        borderRadius: 10,
+        margin: 10,
     },
 
+    filterText: {
+        fontSize: 30
+    }
 })
 
 export default FilterButton;

@@ -15,3 +15,9 @@ export const selectLarge = () => {
         type: "SELECT-LARGE"
     }
 }
+
+export const resetSizeFilter = () => {
+    return {
+        type: "RESET-SIZE-FILTER"
+    }
+}

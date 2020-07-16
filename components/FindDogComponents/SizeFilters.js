@@ -4,6 +4,7 @@ import FilterButton from "./FilterButton"
 
 import { useSelector, useDispatch} from "react-redux"
 import {selectSmall, selectMedium, selectLarge} from "../../actions/filterSizesSelectorActions"
+import { resetTopicFilter } from "../../actions/filterDogsSelectorActions";
 
 const TopicFilters = () => {
 

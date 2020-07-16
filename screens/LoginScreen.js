@@ -7,24 +7,25 @@ import {
   KeyboardAvoidingView,
   Button,
 } from "react-native";
-import LogInForm from "./LogInForm";
+import LoginForm from "../components/LoginForm";
 
-export default class LoginScreen extends Component {
-  render() {
-    return (
-      <KeyboardAvoidingView behavior="padding" style={styles.container}>
-        <View style={styles.logoContainer}>
-          {/* <Image style={styles.logo} source={require("../assets/dog2.png")} /> */}
-          <Text style={styles.title}> Who Let The Dogs Out!</Text>
-        </View>
 
-        <View style={styles.formContainer}>
-          <LogInForm />
-        </View>
-      </KeyboardAvoidingView>
-    );
-  }
+const LoginScreen = ({navigation}) => {
+  return (
+    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+      <View style={styles.logoContainer}>
+        {/* <Image style={styles.logo} source={require("../assets/dog2.png")} /> */}
+        <Text style={styles.title}> Who Let The Dogs Out!</Text>
+      </View>
+
+      <View style={styles.formContainer}>
+        <LoginForm />
+      </View>
+    </KeyboardAvoidingView>
+  );
 }
+
+export default LoginScreen
 
 const styles = StyleSheet.create({
   container: {
