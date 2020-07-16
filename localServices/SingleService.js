@@ -13,8 +13,8 @@ import {
     return ( 
         <View style={styles.serviceText}>
             <Text style={styles.serviceTitle}>{props.service.name}</Text>
-            <Text>{props.service.address}</Text>
-            <Text>{props.service.phone_number}</Text>
+            <Text style={styles.textData}>{props.service.address}</Text>
+            <Text style={styles.textData}>{props.service.phone_number}</Text>
         </View>
       );
     }
@@ -26,15 +26,18 @@ import {
     serviceText: {
         paddingTop: 20,
         paddingLeft:20,
-
     },
 
     serviceTitle: {
       paddingLeft:0,
-      color: "#326D67",
+      color: "#383732",
       paddingBottom:10,
       fontWeight: "bold",
+      fontSize:18,
+    },
+    textData: {
       fontSize:16,
+      paddingBottom:5,
     }
 
   });

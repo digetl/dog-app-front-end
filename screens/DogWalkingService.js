@@ -120,7 +120,6 @@ const styles = StyleSheet.create({
       backgroundColor: "#d07a38"},
 
     dogService: {
-    
       backgroundColor: "#66a5c7",
       }
 });
