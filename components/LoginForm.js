@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect} from "react";
 import {
   StyleSheet,
   View,
@@ -9,20 +9,35 @@ import {
 } from "react-native";
 
 import userService from "../apiService/userService"
+import { useSelector, useDispatch } from "react-redux"
+import { loginUser, loginError } from "../actions/loginAction"
+import { useNavigation } from "@react-navigation/native";
 // import { TextInput } from "react-native-gesture-handler";
 
 const LoginForm = () => {
 
-  const [username, onChangeUsername] = useState("")
-  const [password, onChangePassword] = useState("")
+  const dispatch = useDispatch()
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+
+  const navigator = useNavigation()
 
   const handleLogin = () => {
     userService.postUserLogin({
       "username": username,
       "password": password
     })
-     .then(res => console.log(res))
-
+     .then(res => {
+       if (res.error){
+        dispatch(loginError({error: "Username or Password Incorrect"}))
+       } 
+       if (res.username) {
+         console.log("Success");
+         
+        dispatch(loginUser(res))
+        navigator.navigate("HomeScreen")
+       }
+     })
   }
 
 
@@ -34,7 +49,7 @@ const LoginForm = () => {
         placeholderTextColor="rgba(255,255,255,0.7)"
         // returnKeyType="next"
         // onSubmitEditing={() => this.passwordInput.focus()}
-        onChangeText={text => onChangeUsername(text)}
+        onChangeText={text => setUsername(text)}
         // keyboardType="email-address"
         // autoCapitalize="none"
         // autoCorrect={false}
@@ -43,7 +58,7 @@ const LoginForm = () => {
       <TextInput
         placeholder="Enter Password"
         placeholderTextColor="rgba(255,255,255,0.7)"
-        onChangeText={text => onChangePassword(text)}
+        onChangeText={text => setPassword(text)}
         secureTextEntry
         returnKeyType="go"
         style={styles.input}
