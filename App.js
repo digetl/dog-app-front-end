@@ -19,6 +19,8 @@ import Manage from "./screens/Manage";
 import Profile from "./screens/Profile";
 import Footer from "./components/Footer";
 import DogWalkingService from "./screens/DogWalkingService";
+import PetShopServices from "./screens/PetShopServices";
+import VetService from "./screens/VetService";
 
 console.disableYellowBox = true;
 
@@ -38,6 +40,8 @@ const App = () => {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="LocalServices" component={LocalServices} />
         <Stack.Screen name="DogWalkingService" component={DogWalkingService}/>
+        <Stack.Screen name="PetShopServices" component={PetShopServices}/>
+        <Stack.Screen name="VetService" component={VetService} />
         <Stack.Screen name="Footer" component={Footer} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import WideBox from "../styled-components/WideBox";
 
 import Footer from ".././components/Footer";
@@ -9,45 +8,38 @@ import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity} 
 import SingleService from "../localServices/SingleService";
 import { ScrollView } from "react-native-gesture-handler";
 
+
 const DATA = [
   {
     id: "001",
-    service_type: "Dog Walker",
-    name: "The Dashing White Rabbit Company",
-    address: "3 Sinclair Place, Edinburgh, EH11 1AG",
-    phone_number: "0131 478 5098"
+    name: "Market Cross Veterinary Clinic Ltd",
+    address: "Dalkeith, EH22",
+    phone_number: "01312 022136"
     
   },
   {
     id: "002",
-    service_type: "Dog Walker",
-    name: "Healthy Hounds",
-    address: "7/3 New Orchardfield, Edinburgh, EH6 5ES",
-    phone_number: "07837 774478"
+    name: "Dundas Veterinary Group",
+    address: "99 Dundas Street, Edinburgh, EH3 6SD",
+    phone_number: "0131 202 2719"
   },
   {
     id: "003",
-    service_type: "Dog Walker",
-    name: "P and J Pet Care",
-    address: "Gilmour Street, Edinburgh, EH8 9HR",
-    phone_number: "07999 482440"
+    name: "Gordon Vets Ltd",
+    address: "Musselburgh, EH21",
+    phone_number: "0131 665 2124"
   },
-  {
-    id: "004",
-    service_type: "Dog Walker",
-    name: "Dog Walking Edinburgh",
-    address: "14/7 Murano Place, Edinburgh, EH7 5HG",
-    phone_number: "07814 447450"
-  },
+  
 ];
 
 const Item = ({ item, onPress, style }) => (
   <TouchableOpacity onPress={onPress} style={[styles.item, style]}>
-    <Text style={styles.title}>{item.service_type} - {item.name}</Text>
+    <Text>{item.name}</Text>
   </TouchableOpacity>
 );
 
-const Services = () => {
+const VetService = () => {
+  
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
@@ -69,7 +61,7 @@ const Services = () => {
       <ScrollView>
       <SafeAreaView style={styles.container}>
         <WideBox>
-          <Text style={styles.topTitle}>Local Services</Text>
+          <Text>Pet Shops</Text>
         </WideBox>
         <FlatList
           data={DATA}
@@ -107,7 +99,22 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
+  buttonRow: {
+    flex:1,
+    flexDirection: "row",  
+    justifyContent: 'center',
+  },
+  buttonText: {
+    fontSize:24,
+    fontWeight: "bold",
+    color: "#fff",
+    paddingTop:20,
+    paddingBottom:20,
+    textAlign: "center",
+  },
+  greenrow: {
+    backgroundColor: "#326d67"},
 });
 
 
-export default Services;
+export default VetService;

@@ -12,7 +12,6 @@ import {
     if (props.service) {
     return ( 
         <View style={styles.serviceText}>
-            <Text style={styles.serviceTitle}>{props.service.serviceType}</Text>
             <Text>{props.service.name}</Text>
             <Text>{props.service.address}</Text>
             <Text>{props.service.phone_number}</Text>

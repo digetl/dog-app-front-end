@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import WideBox from "../styled-components/WideBox";
 
 import Footer from ".././components/Footer";
@@ -9,45 +8,49 @@ import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity} 
 import SingleService from "../localServices/SingleService";
 import { ScrollView } from "react-native-gesture-handler";
 
+
 const DATA = [
   {
     id: "001",
-    service_type: "Dog Walker",
-    name: "The Dashing White Rabbit Company",
-    address: "3 Sinclair Place, Edinburgh, EH11 1AG",
-    phone_number: "0131 478 5098"
+    name: "Noahs Ark Pet Shop",
+    address: "38-40 Granton Road, Edinburgh, EH5 3QS",
+    phone_number: "0131 551 2570"
     
   },
   {
     id: "002",
-    service_type: "Dog Walker",
-    name: "Healthy Hounds",
-    address: "7/3 New Orchardfield, Edinburgh, EH6 5ES",
-    phone_number: "07837 774478"
+    name: "Hill Lord and Co",
+    address: "735 Bruntsfield Place, Edinburgh, EH10 4HJ",
+    phone_number: "0131 229 6655"
   },
   {
     id: "003",
-    service_type: "Dog Walker",
-    name: "P and J Pet Care",
-    address: "Gilmour Street, Edinburgh, EH8 9HR",
-    phone_number: "07999 482440"
+    name: "Dofos Pet Centre and Dog Grooming",
+    address: "337 Leith Walk Edinburgh, EH6 8SD",
+    phone_number: "0131 557 4666"
   },
   {
     id: "004",
-    service_type: "Dog Walker",
-    name: "Dog Walking Edinburgh",
-    address: "14/7 Murano Place, Edinburgh, EH7 5HG",
-    phone_number: "07814 447450"
+    name: "Top Dogz",
+    address: "353 Leith Walk, Leith, Edinburgh, EH6 8SD",
+    phone_number: "0131 553 4409"
+  },
+  {
+    id: "005",
+    name: "Doggone Purrfect",
+    address: "268 Leith Walk, Edinburgh, EH6 5EL",
+    phone_number: "0131 561 1438"
   },
 ];
 
 const Item = ({ item, onPress, style }) => (
   <TouchableOpacity onPress={onPress} style={[styles.item, style]}>
-    <Text style={styles.title}>{item.service_type} - {item.name}</Text>
+    <Text>{item.name}</Text>
   </TouchableOpacity>
 );
 
-const Services = () => {
+const PetShopServices = () => {
+  
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
@@ -69,7 +72,7 @@ const Services = () => {
       <ScrollView>
       <SafeAreaView style={styles.container}>
         <WideBox>
-          <Text style={styles.topTitle}>Local Services</Text>
+          <Text>Pet Shops</Text>
         </WideBox>
         <FlatList
           data={DATA}
@@ -107,7 +110,22 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
+  buttonRow: {
+    flex:1,
+    flexDirection: "row",  
+    justifyContent: 'center',
+  },
+  buttonText: {
+    fontSize:24,
+    fontWeight: "bold",
+    color: "#fff",
+    paddingTop:20,
+    paddingBottom:20,
+    textAlign: "center",
+  },
+  greenrow: {
+    backgroundColor: "#326d67"},
 });
 
 
-export default Services;
+export default PetShopServices;
