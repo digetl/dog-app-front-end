@@ -34,7 +34,6 @@ const DogList = ({dogs}) => {
 
         <FlatList
           data= {dogs}
-        //   ItemSeparatorComponent = {this.FlatListItemSeparator}
           renderItem= {item=> this.renderDogs(item)}
           keyExtractor= {item=>item.id.toString()}
         />
@@ -52,6 +51,7 @@ const styles = StyleSheet.create({
         height: 80,
         width: 320,
         backgroundColor: "#19A79C",
+        borderRadius: 10,
         margin: 10,
     },
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {View, StyleSheet} from "react-native"
+import {View, Text, StyleSheet} from "react-native"
 import dogServices from "../apiService/dogService"
 
 import { useSelector, useDispatch} from "react-redux"
@@ -50,6 +50,7 @@ const FindScreen = ({navagation}) => {
     <> 
       {/* A NEW VIEW NEEDS TO GO IN HERE */}
       <View style={styles.container}>
+        <Text style={styles.filterHeading}>Filter your search to find your most suitable perfect pal</Text>
         {!filter && (!size || !group) ? <TopicFilters></TopicFilters> : null}
         {!size && filter === "Size" ? <SizeFilters></SizeFilters> : null}
         {!group && filter === "Group" ? <GroupFilters></GroupFilters> : null}
@@ -68,6 +69,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     backgroundColor: "#fff"
   },
+  filterHeading: {
+    textAlign: "center",
+    fontSize: 20,
+    width: 300
+  }
 })
 
 export default FindScreen;
