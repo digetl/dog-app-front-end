@@ -18,12 +18,11 @@ const Profile = ({ navigation }) => {
   return (
     <>
       <ScrollView>
-        {/* <TouchableOpacity style={(styles.buttonRow, styles.greenrow)}> */}
-        <TouchableOpacity behavior="padding" style={styles.container}>
+        <SafeAreaView behavior="padding" style={styles.container}>
           <View>
             <Text style={styles.title}>Profile Page </Text>
           </View>
-        </TouchableOpacity>
+        </SafeAreaView>
       </ScrollView>
 
       <Footer></Footer>
@@ -34,20 +33,22 @@ const Profile = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#66A5C7",
-  },
-  titleContainer: {
-    flex: 1,
     backgroundColor: "#D07A38",
     justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     color: "white",
     marginTop: 10,
     width: 160,
     textAlign: "center",
-    opacity: 0.7,
+    opacity: 0.8,
   },
+  // titleContainer: {
+  //   flex: 1,
+  //   backgroundColor: "#D07A38",
+  //   justifyContent: "center",
+  // },
   // smallIconContainer: {
   //   flex: 1,
   //   backgroundColor: "#fff",
