@@ -22,7 +22,8 @@ const LocalServices = ({navigation}) => {
       <>
         
         <ScrollView>
-            <TouchableOpacity onPress={() => navigation.navigate("DogWalkingService")}>
+            
+            <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={() => navigation.navigate("DogWalkingService")}>
                     <View style={styles.wideButton}>
                         <Text style={styles.buttonText}>Dog Walking Service</Text>
                     </View>
@@ -96,6 +97,21 @@ const LocalServices = ({navigation}) => {
       backgroundColor: "#a4c1db",
       justifyContent: "center",
     },
+    buttonRow: {
+      flex:1,
+      flexDirection: "row",  
+      justifyContent: 'center',
+    },
+    buttonText: {
+      fontSize:24,
+      fontWeight: "bold",
+      color: "#fff",
+      paddingTop:20,
+      paddingBottom:20,
+      textAlign: "center",
+    },
+    greenrow: {
+      backgroundColor: "#326d67"},
   });
   
 
