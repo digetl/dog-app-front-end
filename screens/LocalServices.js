@@ -2,7 +2,8 @@ import React from "react";
 
 import { ScrollView } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
-
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import {
     StyleSheet,
     Text,
@@ -11,13 +12,15 @@ import {
   } from "react-native";
 
 import Footer from ".././components/Footer";
+import DogWalkingService from "./DogWalkingService"
 
-const LocalServices = () => {
+const LocalServices = ({navigation}) => {
 
-    const navigation = useNavigation();
+    // const navigation = useNavigation();
   
     return (
       <>
+        
         <ScrollView>
             <TouchableOpacity onPress={() => navigation.navigate("DogWalkingService")}>
                     <View style={styles.wideButton}>
