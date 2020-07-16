@@ -1,8 +1,9 @@
-import React from "react";
-
-import WideBox from "../styled-components/WideBox";
-import {Text, StyleSheet, ScrollView} from "react-native";
+import React, from "react";
 import Footer from ".././components/Footer";
+
+import { FlatList, SafeAreaView, StatusBar, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity } from "react-native";
+
+import { ScrollView } from "react-native-gesture-handler";
 
 const Profile = () => {
   return (
