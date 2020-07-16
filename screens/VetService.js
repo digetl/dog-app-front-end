@@ -43,7 +43,7 @@ const VetService = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#4da49c" : "#a4c1db";
+    const backgroundColor = item.id === selectedId ? "#4da49c" : "#66a5c7";
 
     return (
       

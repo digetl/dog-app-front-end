@@ -46,7 +46,7 @@ const DogWalkingService = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#326d67" : "#66A5C7";
+    const backgroundColor = item.id === selectedId ? "#4da49c" : "#326d67";
 
     return (
       
@@ -61,7 +61,7 @@ const DogWalkingService = () => {
 
   return (
     <>
-      <ScrollView>
+      <ScrollView style={styles.dogService}>
       <SafeAreaView style={styles.container}>
       
         <FlatList
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
       flexDirection: "row",  
       justifyContent: 'center',
       marginBottom:5,
+      marginTop:10,
     },
     buttonText: {
       fontSize:18,
@@ -117,6 +118,11 @@ const styles = StyleSheet.create({
   
     darktanrow: {
       backgroundColor: "#d07a38"},
+
+    dogService: {
+    
+      backgroundColor: "#66a5c7",
+      }
 });
 
 

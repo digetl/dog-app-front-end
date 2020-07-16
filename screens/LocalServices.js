@@ -15,16 +15,14 @@ import Footer from ".././components/Footer";
 import DogWalkingService from "./DogWalkingService"
 
 const LocalServices = ({navigation}) => {
-
-    // const navigation = useNavigation();
   
     return (
       <>
         
-        <ScrollView style={styles.localServices}>
+        <View style={styles.localServices}>
             <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={() => navigation.navigate("DogWalkingService")}>
                     <View style={styles.wideButton}>
-                        <Text style={styles.buttonText}>Dog Walking Services</Text>
+                        <Text style={styles.buttonText}>Dog Walkers</Text>
                     </View>
             </TouchableOpacity>
 
@@ -36,10 +34,10 @@ const LocalServices = ({navigation}) => {
 
             <TouchableOpacity style={styles.buttonRow, styles.mintrow} onPress={() => navigation.navigate("VetService")}>
                     <View style={styles.wideButton}>
-                        <Text style={styles.buttonText}>Vets</Text>
+                        <Text style={styles.buttonText}>Local Vets</Text>
                     </View>
             </TouchableOpacity>
-        </ScrollView>
+        </View>
   
         <Footer></Footer>
       </>
@@ -72,6 +70,14 @@ const LocalServices = ({navigation}) => {
   
     darktanrow: {
       backgroundColor: "#d07a38"},
+
+    localServices: {
+      flex:1,
+      justifyContent: "space-between",
+      paddingTop: 120,
+      paddingBottom: 120,
+      backgroundColor: "#66a5c7",
+      }
   });
   
 

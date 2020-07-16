@@ -54,7 +54,7 @@ const PetShopServices = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#d8955a" : "#66A5C7";
+    const backgroundColor = item.id === selectedId ? "#d8955a" : "#66a5c7";
 
     return (
       
