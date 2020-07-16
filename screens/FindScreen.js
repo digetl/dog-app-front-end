@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {View, Text, StyleSheet} from "react-native"
 import dogServices from "../apiService/dogService"
+import Footer from ".././components/Footer";
 
 import { useSelector, useDispatch} from "react-redux"
 
@@ -56,6 +57,7 @@ const FindScreen = ({navagation}) => {
         {!group && filter === "Group" ? <GroupFilters></GroupFilters> : null}
         {filter && (size || group) || filter === "Breed" ? filteredDogList() : null}
       </View>
+      <Footer />
     </>
   )
   
