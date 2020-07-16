@@ -27,7 +27,7 @@ import {
     },
 
     articleTitle: {
-      color: "#52a6cb",
+      color: "#326D67",
       paddingBottom:10,
       fontWeight: "bold",
       fontSize:18,
