@@ -12,7 +12,7 @@ import {
     if (props.service) {
     return ( 
         <View style={styles.serviceText}>
-            <Text>{props.service.name}</Text>
+            <Text style={styles.serviceTitle}>{props.service.name}</Text>
             <Text>{props.service.address}</Text>
             <Text>{props.service.phone_number}</Text>
         </View>
@@ -25,14 +25,16 @@ import {
 
     serviceText: {
         paddingTop: 20,
+        paddingLeft:20,
+
     },
 
     serviceTitle: {
-      color: "#52a6cb",
+      paddingLeft:0,
+      color: "#326D67",
       paddingBottom:10,
       fontWeight: "bold",
-      fontSize:18,
-      textAlign: "center",
+      fontSize:16,
     }
 
   });

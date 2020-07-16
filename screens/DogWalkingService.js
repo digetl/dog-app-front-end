@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import WideBox from "../styled-components/WideBox";
-
 import Footer from ".././components/Footer";
 import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity} from "react-native";
 
@@ -38,8 +36,8 @@ const DATA = [
 ];
 
 const Item = ({ item, onPress, style }) => (
-  <TouchableOpacity onPress={onPress} style={[styles.item, style]}>
-    <Text>{item.name}</Text>
+  <TouchableOpacity onPress={onPress} style={[styles.buttonRow, style]}>
+    <Text style={styles.buttonText}>{item.name}</Text>
   </TouchableOpacity>
 );
 
@@ -48,7 +46,7 @@ const DogWalkingService = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#52a6cb" : "#a4c1db";
+    const backgroundColor = item.id === selectedId ? "#326d67" : "#66A5C7";
 
     return (
       
@@ -65,9 +63,7 @@ const DogWalkingService = () => {
     <>
       <ScrollView>
       <SafeAreaView style={styles.container}>
-        <WideBox>
-          <Text>Dog Walking Services</Text>
-        </WideBox>
+      
         <FlatList
           data={DATA}
           renderItem={renderItem}
@@ -104,21 +100,35 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
-  buttonRow: {
-    flex:1,
-    flexDirection: "row",  
-    justifyContent: 'center',
-  },
-  buttonText: {
-    fontSize:24,
-    fontWeight: "bold",
-    color: "#fff",
-    paddingTop:20,
-    paddingBottom:20,
-    textAlign: "center",
-  },
-  greenrow: {
-    backgroundColor: "#326d67"},
+  
+
+
+
+    buttonRow: {
+      flex:1,
+      flexDirection: "row",  
+      justifyContent: 'center',
+      marginBottom:5,
+    },
+    buttonText: {
+      fontSize:18,
+      fontWeight: "bold",
+      color: "#fff",
+      paddingTop:10,
+      paddingBottom:10,
+      textAlign: "center",
+    },
+    greenrow: {
+      backgroundColor: "#326d67"},
+
+    mintrow: {
+      backgroundColor: "#4da49c"},
+    
+    tanrow: {
+      backgroundColor: "#d8955a"},
+  
+    darktanrow: {
+      backgroundColor: "#d07a38"},
 });
 
 

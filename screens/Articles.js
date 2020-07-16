@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Footer from ".././components/Footer";
 
-import WideBox from "../styled-components/WideBox";
 import { FlatList, SafeAreaView, StatusBar, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import SingleArticle from "../articles/SingleArticle";
@@ -99,6 +98,7 @@ const styles = StyleSheet.create({
     flex:1,
     flexDirection: "row",  
     justifyContent: 'center',
+    marginBottom:5,
   },
 
   buttonText: {
