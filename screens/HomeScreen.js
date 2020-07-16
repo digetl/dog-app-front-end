@@ -3,20 +3,15 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
+  Image,
+  ScrollView,
+  SafeAreaView,
   View,
   TouchableOpacity,
   ImageBackground,
 } from "react-native";
-import WideBox from "../styled-components/WideBox";
-import Logo from "../styled-components/Logo";
-import WideButton from "../styled-components/WideButton";
-import { Button } from "react-native";
-import Footer from "../components/Footer";
 
-const image = {
-  uri:
-    "https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg",
-};
+import Footer from "../components/Footer";
 
 const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
@@ -27,127 +22,79 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <>
-      <WideBox>
-        <Logo>
-          <WideButton style={styles.blueButton}>
-            <Text style={styles.buttonText}>@ NextBestFriend</Text>
-          </WideButton>
-        </Logo>
-      </WideBox>
-
-      <WideBox>
-        <WideButton>
-          <ImageBackground
-            source={image}
-            style={styles.image}
-          ></ImageBackground>
-        </WideButton>
-      </WideBox>
-
-      <TouchableOpacity style={styles.blueButton} onPress={onPressFindScreen}>
-        <WideButton>
-          <View style={styles.wideButton}>
-            <Text style={styles.buttonText}>Find your next best friend</Text>
-          </View>
-        </WideButton>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.mintButton} onPress={onPressArticles}>
-        <WideButton>
-          <View style={styles.wideButton}>
-            <Text style={styles.buttonText}>Articles</Text>
-          </View>
-        </WideButton>
-      </TouchableOpacity>
-
-      <View style={styles.smallIconContainer}>
-
-        <TouchableOpacity style={styles.leftBox} onPress={onPressProfile}>
-            <View style={styles.button1}>
-              <Text style={styles.buttonText}>Profile</Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.rightBox} onPress={onPressLocalServices}>
-            <View style={styles.button2}>
-              <Text style={styles.buttonText}>Local Services</Text>
-            </View>
-        </TouchableOpacity>
-
-        <Footer onPress={onPressHomeScreen}></Footer>
-
+    <SafeAreaView style={styles.homeView}>
+      
+      <View style={styles.logo}>
+        <Image source={require('../assets/nbfLogo.png')} />
       </View>
-    </>
 
-    // <Button
-    //   title="Go to Find screen"
-    //   onPress={() => navigation.navigate("FindScreen")}
-    // />
+      <View style={styles.logo} >
+        <Image source={require('../assets/lineup.png')} />
+      </View>
+       
+      <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={onPressFindScreen}>
+        <Text style={styles.buttonText}>Find your next best friend</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.buttonRow, styles.mintrow} onPress={onPressArticles}>
+        <Text style={styles.buttonText}>Articles</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.buttonRow, styles.tanrow} onPress={onPressProfile}>
+        <Text style={styles.buttonText}>Profile</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.buttonRow, styles.darktanrow} onPress={onPressLocalServices}>
+        <Text style={styles.buttonText}>Local Services</Text>
+      </TouchableOpacity>
+    
+      <Footer onPress={onPressHomeScreen}></Footer>
+
+      </SafeAreaView>
+
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  smallIconContainer: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-  },
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
-  leftBox: {
-    backgroundColor: "#e3924e",
-    alignItems: "center",
-    margin: 0,
-    width: "50%",
-  },
-  rightBox: {
-    backgroundColor: "#a4c1db",
-    alignItems: "center",
-    margin: 0,
-    width: "50%",
-  },
-  buttonText: {
-    textAlign: "center",
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  button1: {
-    width: "100%",
-    height: 100,
-    backgroundColor: "#e3924e",
-    justifyContent: "center",
-  },
-  
-  orangeButton: {
-    backgroundColor: "#e3924e",
-  },
-  
-  greyButton: {
-    backgroundColor: "#f5f1f0",
+
+  homeView: {
+    backgroundColor: "#66a5c7",
+    flex:1,
+    flexDirection: "column",
   },
 
-  darkTanButton: {
-    backgroundColor: "#973618",
+  logo: {
+    padding: 10,
   },
-  blueButton: {
-    backgroundColor: "#52a6cb",
+
+  buttonRow: {
+    flex:1,
+    flexDirection: "row",  
+    justifyContent: 'center',
   },
-  mintButton: {
-    backgroundColor: "#19A79C",
+
+  buttonText: {
+    fontSize:24,
+    fontWeight: "bold",
+    color: "#fff",
+    paddingTop:20,
+    paddingBottom:20,
+    textAlign: "center",
   },
-  button2: {
-    width: "100%",
-    height: 100,
-    backgroundColor: "#a4c1db",
-    justifyContent: "center",
-  },
+
+  greenrow: {
+    backgroundColor: "#326d67"},
+
+  mintrow: {
+    backgroundColor: "#4da49c"},
+ 
+  tanrow: {
+    backgroundColor: "#d8955a"},
+
+  darktanrow: {
+    backgroundColor: "#d07a38"},
+
 });
 
 export default HomeScreen;
