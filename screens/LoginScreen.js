@@ -10,12 +10,27 @@ import {
 import LoginForm from "../components/LoginForm";
 
 
+import {useSelector} from "react-redux"
+
+
 const LoginScreen = ({navigation}) => {
+
+  const loginStatus = useSelector(state => state.login)
+
+
+  const error = () => {
+      return (
+        <Text>Username or Password Incorrect</Text>
+      )
+  }
+
+
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <View style={styles.logoContainer}>
         {/* <Image style={styles.logo} source={require("../assets/dog2.png")} /> */}
-        <Text style={styles.title}> Who Let The Dogs Out!</Text>
+        {!loginStatus.error ? <Text style={styles.title}> Who Let The Dogs Out!</Text> : null}
+        {loginStatus.error ? error() : null}
       </View>
 
       <View style={styles.formContainer}>
