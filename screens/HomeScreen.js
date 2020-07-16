@@ -10,15 +10,8 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from "react-native";
-import WideBox from "../styled-components/WideBox";
-import Logo from "../styled-components/Logo";
-import WideButton from "../styled-components/WideButton";
-import { Button } from "react-native";
+
 import Footer from "../components/Footer";
-import Constants from 'expo-constants';
-
-
-import SingleArticle from "../articles/SingleArticle";
 
 const HomeScreen = ({ navigation }) => {
   const onPressFindScreen = () => navigation.navigate("FindScreen");
@@ -47,15 +40,15 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.buttonText}>Articles</Text>
       </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRow, styles.tanrow} onPress={onPressProfile}>
-          <Text style={styles.buttonText}>Profile</Text>
-        </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonRow, styles.tanrow} onPress={onPressProfile}>
+        <Text style={styles.buttonText}>Profile</Text>
+      </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRow, styles.darktanrow} onPress={onPressLocalServices}>
-          <Text style={styles.buttonText}>Local Services</Text>
-        </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonRow, styles.darktanrow} onPress={onPressLocalServices}>
+        <Text style={styles.buttonText}>Local Services</Text>
+      </TouchableOpacity>
     
-        <Footer onPress={onPressHomeScreen}></Footer>
+      <Footer onPress={onPressHomeScreen}></Footer>
 
       </SafeAreaView>
 
@@ -93,14 +86,15 @@ const styles = StyleSheet.create({
   greenrow: {
     backgroundColor: "#326d67"},
 
-   mintrow: {
-     backgroundColor: "#4da49c"},
+  mintrow: {
+    backgroundColor: "#4da49c"},
  
-     tanrow: {
-     backgroundColor: "#d8955a"},
+  tanrow: {
+    backgroundColor: "#d8955a"},
 
-     darktanrow: {
-      backgroundColor: "#d07a38"},
+  darktanrow: {
+    backgroundColor: "#d07a38"},
+
 });
 
 export default HomeScreen;

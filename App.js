@@ -8,7 +8,6 @@ import rootReducer from './RootReducer';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-
 import HomeScreen from "./screens/HomeScreen";
 import FindScreen from "./screens/FindScreen";
 import Articles from "./screens/Articles";
