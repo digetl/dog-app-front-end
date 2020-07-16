@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from ".././components/Footer";
 
 import WideBox from "../styled-components/WideBox";
-import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { FlatList, SafeAreaView, StatusBar, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import SingleArticle from "../articles/SingleArticle";
 import { ScrollView } from "react-native-gesture-handler";
@@ -32,8 +32,8 @@ const DATA = [
 ];
 
 const Item = ({ item, onPress, style }) => (
-  <TouchableOpacity onPress={onPress} style={[styles.item, style]}>
-    <Text style={styles.title}>{item.title}</Text>
+  <TouchableOpacity onPress={onPress} style={[styles.buttonRow, style]}>
+    <Text style={styles.buttonText}>{item.title}</Text>
   </TouchableOpacity>
 );
 
@@ -41,7 +41,7 @@ const Articles = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#52a6cb" : "#a4c1db";
+    const backgroundColor = item.id === selectedId ? "#D07A38" : "#66A5C7";
 
     return (
       
@@ -56,12 +56,9 @@ const Articles = () => {
 
   return (
   <>
-    <ScrollView>
-      <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.container}>
+      <KeyboardAvoidingView>
 
-        <WideBox>
-          <Text style={styles.topTitle}>Latest Articles</Text>
-        </WideBox>
         <FlatList
           data={DATA}
           renderItem={renderItem}
@@ -69,8 +66,7 @@ const Articles = () => {
           extraData={selectedId}
         />
         <SingleArticle article={DATA.find((item) => item.id === selectedId)}></SingleArticle>
-
-      </SafeAreaView>
+        </KeyboardAvoidingView>
     </ScrollView>
     <Footer></Footer>
   </> 
@@ -81,7 +77,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
-    justifyContent: "space-around",
+    // justifyContent: "space-around",
     margin: 15,
   },
   item: {
@@ -97,6 +93,21 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
     fontWeight: "bold",
+  },
+
+  buttonRow: {
+    flex:1,
+    flexDirection: "row",  
+    justifyContent: 'center',
+  },
+
+  buttonText: {
+    fontSize:18,
+    fontWeight: "bold",
+    color: "#fff",
+    paddingTop:10,
+    paddingBottom:10,
+    textAlign: "center",
   },
 });
 
