@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  View,
 } from "react-native";
 
 import { ScrollView } from "react-native-gesture-handler";
@@ -68,20 +69,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  orangeButton: {
-    backgroundColor: "#e3924e",
-  },
+  // orangeButton: {
+  //   backgroundColor: "#e3924e",
+  // },
 
-  greyButton: {
-    backgroundColor: "#f5f1f0",
-  },
+  // greyButton: {
+  //   backgroundColor: "#f5f1f0",
+  // },
 
-  darkTanButton: {
-    backgroundColor: "#973618",
-  },
-  blueButton: {
-    backgroundColor: "#52a6cb",
-  },
+  // darkTanButton: {
+  //   backgroundColor: "#973618",
+  // },
+  // blueButton: {
+  //   backgroundColor: "#52a6cb",
+  // },
   mintButton: {
     backgroundColor: "#19A79C",
   },
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   greenrow: {
-    backgroundColor: "#326d67",
+    backgroundColor: "#D8955A",
   },
 });
 
