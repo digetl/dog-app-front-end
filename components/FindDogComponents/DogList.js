@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         justifyContent: "space-evenly",
         alignItems: "center",
-        height: 80,
+        height: 40,
         width: 320,
         backgroundColor: "#19A79C",
         borderRadius: 10,
-        margin: 10,
+        margin: 5,
     },
 
     dogBreedText: {

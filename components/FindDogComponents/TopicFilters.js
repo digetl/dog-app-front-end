@@ -24,7 +24,10 @@ const styles = StyleSheet.create({
 
   topicsContainer: {
     flex: 0.7,
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+  },
+  topicButtons: {
+    fontSize:18,
   }
 
 

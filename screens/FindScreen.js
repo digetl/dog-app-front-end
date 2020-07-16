@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-around",
-    backgroundColor: "#fff"
+    backgroundColor: "#66A5C7"
   },
   filterHeading: {
     textAlign: "center",

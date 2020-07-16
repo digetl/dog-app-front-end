@@ -21,15 +21,15 @@ const styles = StyleSheet.create({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: 100,
-        width: 300,
+        height: 80,
+        width: 280,
         backgroundColor: "#19A79C",
         borderRadius: 10,
         margin: 10,
     },
 
     filterText: {
-        fontSize: 30
+        fontSize: 20
     }
 })
 
