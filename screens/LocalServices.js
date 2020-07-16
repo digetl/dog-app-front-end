@@ -24,13 +24,19 @@ const LocalServices = ({navigation}) => {
         <ScrollView>
             <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={() => navigation.navigate("DogWalkingService")}>
                     <View style={styles.wideButton}>
-                        <Text style={styles.buttonText}>Dog Walking Service</Text>
+                        <Text style={styles.buttonText}>Dog Walking Services</Text>
                     </View>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={() => navigation.navigate("PetShopServices")}>
                     <View style={styles.wideButton}>
                         <Text style={styles.buttonText}>Pet Shops</Text>
+                    </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.buttonRow, styles.greenrow} onPress={() => navigation.navigate("VetService")}>
+                    <View style={styles.wideButton}>
+                        <Text style={styles.buttonText}>Vets</Text>
                     </View>
             </TouchableOpacity>
         </ScrollView>
