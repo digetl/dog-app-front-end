@@ -76,6 +76,8 @@ export default LoginForm
 const styles = StyleSheet.create({
   container: {
     padding: 30,
+    backgroundColor: "#383732",
+    
   },
   input: {
     height: 40,

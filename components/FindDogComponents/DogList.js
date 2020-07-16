@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 
     dogItemText: {
         textAlign: "center",  
-        width: 80,
+        width: 40,
         fontSize: 18,
     }
 })
